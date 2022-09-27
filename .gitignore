@@ -1,3 +1,10 @@
+.DS_Store
+*/.DS_Store
+catpro/data/*
+catpro/text/data/*
+catpro/.idea
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

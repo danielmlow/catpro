@@ -1,0 +1,1570 @@
+{
+    "0":{
+        "category":"agitated",
+        "source":"merriam_webster",
+        "sense":0,
+        "sense_definition":"being in a state of increased activity or agitation",
+        "tokens":"['excited', 'feverish', 'frenzied', 'heated', 'hectic', 'hyperactive', 'overactive', 'overwrought']",
+        "annotation_remove":0
+    },
+    "1":{
+        "category":"agitated",
+        "source":"merriam_webster",
+        "sense":1,
+        "sense_definition":"feeling overwhelming fear or worry",
+        "tokens":"['delirious', 'distracted', 'distrait', 'distraught', 'frantic', 'frenzied', 'hysterical', 'hysteric']",
+        "annotation_remove":0
+    },
+    "2":{
+        "category":"agitated",
+        "source":"merriam_webster",
+        "sense":2,
+        "sense_definition":"to cause (as a liquid) to move about in a circle especially repeatedly",
+        "tokens":"['churned', 'stirred', 'swirled', 'washed', 'whirled']",
+        "annotation_remove":0
+    },
+    "3":{
+        "category":"agitated",
+        "source":"merriam_webster",
+        "sense":3,
+        "sense_definition":"to trouble the mind of; to make uneasy",
+        "tokens":"['ailed', 'alarmed', 'alarumed', 'bothered', 'concerned', 'derailed', 'discomforted', 'discomposed', 'dismayed', 'disquieted', 'distempered', 'distracted', 'distressed', 'disturbed', 'exercised', 'flurried', 'frazzled', 'freaked (out)', 'fussed', 'hagrode', 'perturbed', 'undid', 'unhinged', 'unsettled', 'upset', 'weirded out', 'worried']",
+        "annotation_remove":0
+    },
+    "4":{
+        "category":"agitated",
+        "source":"merriam_webster",
+        "sense":4,
+        "sense_definition":"to make a series of small irregular or violent movements",
+        "tokens":"['bucketed', 'convulsed', 'jerked', 'jiggled', 'joggled', 'jolted', 'jounced', 'juddered', 'quaked', 'quivered', 'shook', 'shuddered', 'vibrated', 'wobbled', 'wabbled']",
+        "annotation_remove":0
+    },
+    "5":{
+        "category":"agitated",
+        "source":"merriam_webster",
+        "sense":5,
+        "sense_definition":"to talk about (an issue) usually from various points of view and for the purpose of arriving at a decision or opinion",
+        "tokens":"['argued', 'bandied', 'batted (around or back and forth)', 'canvassed', 'canvased', 'debated', 'discussed', 'disputed', 'hashed (over or out)', 'mooted', 'talked over']",
+        "annotation_remove":0
+    },
+    "6":{
+        "category":"agitated",
+        "source":"synonym_com",
+        "sense":6,
+        "sense_definition":null,
+        "tokens":"['aroused', 'distraught', 'emotional', 'excited', 'feverish', 'frantic', 'frenetic', 'frenzied', 'hectic', 'hysterical', 'impatient', 'jolted', 'overwrought', 'phrenetic', 'psychedelic', 'shaken', 'tense', 'unquiet', 'unsteady', 'wild-eyed', 'worked up']",
+        "annotation_remove":0
+    },
+    "7":{
+        "category":"agitated",
+        "source":"thesaurus_com",
+        "sense":7,
+        "sense_definition":null,
+        "tokens":"['aroused', 'excited', 'flustered', 'moved', 'upset']",
+        "annotation_remove":0
+    },
+    "8":{
+        "category":"anhedonia",
+        "source":"synonym_com",
+        "sense":0,
+        "sense_definition":null,
+        "tokens":"['mental condition', 'mental state', 'psychological condition']",
+        "annotation_remove":0
+    },
+    "9":{
+        "category":"anhedonia",
+        "source":"thesaurus_com",
+        "sense":1,
+        "sense_definition":null,
+        "tokens":"['distress', 'dolor', 'dysphoria', 'grief', 'heartache', 'infelicity', 'melancholy', 'misery', 'misfortune', 'sadness', 'sorrow', 'woe', 'worry', 'wretchedness']",
+        "annotation_remove":0
+    },
+    "10":{
+        "category":"anxious",
+        "source":"merriam_webster",
+        "sense":0,
+        "sense_definition":"feeling or showing uncomfortable feelings of uncertainty",
+        "tokens":"['aflutter', 'antsy', 'atwitter', 'dithery', 'edgy', 'goosey', 'het up', 'hinky', 'hung up', 'ill at ease', 'insecure', 'jittery', 'jumpy', 'nervous', 'nervy', 'perturbed', 'queasy', 'queazy', 'tense', 'troubled', 'uneasy', 'unquiet', 'upset', 'uptight', 'worried']",
+        "annotation_remove":0
+    },
+    "11":{
+        "category":"anxious",
+        "source":"merriam_webster",
+        "sense":1,
+        "sense_definition":"marked by or causing agitation or uncomfortable feelings",
+        "tokens":"['agitating', 'creepy', 'disquieting', 'distressful', 'distressing', 'disturbing', 'fraught', 'hairy', 'nail-biting', 'nerve-racking', 'nerve-wracking', 'nervous', 'restless', 'tense', 'uneasy', 'unnerving', 'unsettling', 'worrisome']",
+        "annotation_remove":0
+    },
+    "12":{
+        "category":"anxious",
+        "source":"merriam_webster",
+        "sense":2,
+        "sense_definition":"showing urgent desire or interest",
+        "tokens":"['agog', 'antsy', 'ardent', 'athirst', 'avid', 'crazy', 'desirous', 'eager', 'enthused', 'enthusiastic', 'excited', 'geeked', 'great', 'greedy', 'gung ho', 'hepped up', 'hopped-up', 'hot', 'hungry', 'impatient', 'juiced', 'keen', 'nuts', 'pumped', 'raring', 'solicitous', 'stoked', 'thirsty', 'voracious', 'wild']",
+        "annotation_remove":0
+    },
+    "13":{
+        "category":"anxious",
+        "source":"synonym_com",
+        "sense":3,
+        "sense_definition":null,
+        "tokens":"['dying']",
+        "annotation_remove":1
+    },
+    "14":{
+        "category":"anxious",
+        "source":"thesaurus_com",
+        "sense":4,
+        "sense_definition":null,
+        "tokens":"['afraid', 'aghast', 'antsy', 'apprehensive', 'basket case', 'bugged', 'butterflies', 'careful', 'choked', 'clutched', 'concerned', 'disquieted', 'distressed', 'disturbed', 'dreading', 'fearful', 'fidgety', 'fretful', 'hacked', 'hyper', 'in a state', 'in a tizzy', 'in suspense', 'jittery', 'jumpy', 'nervous', 'nervy', 'overwrought', 'restless', 'scared', 'shaking', 'shaky', 'shivery', 'shook-up', 'shot to pieces', 'solicitous', 'spooked', 'strung-out', 'sweating bullets', 'taut', 'troubled', 'uneasy', 'unglued', 'unquiet', 'uptight', 'watchful', 'wired', 'worried sick', 'wreck']",
+        "annotation_remove":0
+    },
+    "15":{
+        "category":"apathetic",
+        "source":"merriam_webster",
+        "sense":0,
+        "sense_definition":"having or showing a lack of interest or concern",
+        "tokens":"['casual', 'complacent', 'disinterested', 'incurious', 'indifferent', 'insensible', 'insouciant', 'nonchalant', 'perfunctory', 'pococurante', 'unconcerned', 'uncurious', 'uninterested']",
+        "annotation_remove":0
+    },
+    "16":{
+        "category":"apathetic",
+        "source":"merriam_webster",
+        "sense":1,
+        "sense_definition":"not feeling or showing emotion",
+        "tokens":"['affectless', 'cold-blooded', 'emotionless', 'impassible', 'impassive', 'numb', 'passionless', 'phlegmatic', 'stoic', 'stoical', 'stolid', 'undemonstrative', 'unemotional']",
+        "annotation_remove":0
+    },
+    "17":{
+        "category":"apathetic",
+        "source":"synonym_com",
+        "sense":2,
+        "sense_definition":null,
+        "tokens":"['indifferent']",
+        "annotation_remove":0
+    },
+    "18":{
+        "category":"apathetic",
+        "source":"thesaurus_com",
+        "sense":3,
+        "sense_definition":null,
+        "tokens":"['blah', 'callous', 'cold', 'cool', 'could care less', \"couldn't care less\", \"don't give a damn\", 'draggy', 'emotionless', 'flat', 'impassive', 'indifferent', 'insensible', 'laid-back', 'languid', 'moony', 'passive', 'stoic', 'stolid', 'unconcerned', 'unemotional', 'unfeeling', 'uninterested', 'unmoved', 'unresponsive', 'untouched', 'what the hell', 'wimpy']",
+        "annotation_remove":0
+    },
+    "19":{
+        "category":"body",
+        "source":"merriam_webster",
+        "sense":0,
+        "sense_definition":"the main or greater part of something as distinguished from its subordinate parts",
+        "tokens":"['brunt', 'bulk', 'chief', 'core', 'generality', 'heft', 'main', 'mass', 'staple', 'weight']",
+        "annotation_remove":0
+    },
+    "20":{
+        "category":"body",
+        "source":"merriam_webster",
+        "sense":1,
+        "sense_definition":"a distinct and separate portion of matter",
+        "tokens":"['mass']",
+        "annotation_remove":0
+    },
+    "21":{
+        "category":"body",
+        "source":"merriam_webster",
+        "sense":2,
+        "sense_definition":"a group of people acting together within a larger group",
+        "tokens":"['bloc', 'block', 'coalition', 'faction', 'party', 'sect', 'set', 'side', 'wing']",
+        "annotation_remove":0
+    },
+    "22":{
+        "category":"body",
+        "source":"merriam_webster",
+        "sense":3,
+        "sense_definition":"a group of people sharing a common interest and relating together socially",
+        "tokens":"['bunch', 'circle', 'clan', 'clique', 'community', 'coterie', 'coven', 'crowd', 'fold', 'gal\u00e8re', 'gang', 'klatch', 'klatsch', 'lot', 'network', 'pack', 'ring', 'set']",
+        "annotation_remove":0
+    },
+    "23":{
+        "category":"body",
+        "source":"merriam_webster",
+        "sense":4,
+        "sense_definition":"a member of the human race",
+        "tokens":"['baby', 'being', 'bird', 'bod', 'character', 'cookie', 'cooky', 'creature', 'customer', 'devil', 'duck', 'egg', 'face', 'fish', 'guy', 'head', 'human', 'human being', 'individual', 'life', 'man', 'mortal', 'party', 'person', 'personage', 'scout', 'slob', 'sort', 'soul', 'specimen', 'stiff', 'thing', 'wight']",
+        "annotation_remove":0
+    },
+    "24":{
+        "category":"body",
+        "source":"merriam_webster",
+        "sense":5,
+        "sense_definition":"a usually small number of persons considered as a unit",
+        "tokens":"['array', 'band', 'batch', 'battery', 'boodle', 'bunch', 'cluster', 'clutch', 'consort', 'constellation', 'crop', 'group', 'grouping', 'huddle', 'knot', 'lot', 'parcel', 'party', 'passel']",
+        "annotation_remove":0
+    },
+    "25":{
+        "category":"body",
+        "source":"merriam_webster",
+        "sense":6,
+        "sense_definition":"to represent in visible form",
+        "tokens":"['embody', 'epitomize', 'express', 'externalize', 'incarnate', 'incorporate', 'instantiate', 'manifest', 'materialize', 'personalize', 'personify', 'substantiate']",
+        "annotation_remove":0
+    },
+    "26":{
+        "category":"body",
+        "source":"synonym_com",
+        "sense":7,
+        "sense_definition":null,
+        "tokens":"['anatomy', 'arm', 'articulatory system', 'bod', 'bodily cavity', 'body substance', 'build', 'caput', 'cardiovascular system', 'cavity', 'cavum', 'cervix', 'chassis', 'circulatory system', 'crotch', 'digestive system', 'endocrine system', 'figure', 'fork', 'form', 'frame', 'gastrointestinal system', 'head', 'human body', 'leg', 'life form', 'live body', 'lymphatic system', 'material body', 'musculoskeletal system', 'natural object', 'neck', 'nervous system', 'organic structure', 'physical body', 'physical structure', 'physique', 'pressure point', 'respiratory system', 'sensory system', 'shape', 'soma', 'systema alimentarium', 'systema digestorium', 'systema lymphaticum', 'systema nervosum', 'systema respiratorium', 'torso', 'trunk', 'vascular system']",
+        "annotation_remove":0
+    },
+    "27":{
+        "category":"body",
+        "source":"thesaurus_com",
+        "sense":8,
+        "sense_definition":null,
+        "tokens":"['anatomy', 'bag of bones', 'bod', 'build', 'carcass', 'chassis', 'constitution', 'embodiment', 'figure', 'form', 'frame', 'makeup', 'mortal part', 'protoplasm', 'shaft', 'shape', 'torso', 'trunk']",
+        "annotation_remove":0
+    },
+    "28":{
+        "category":"body",
+        "source":"wordnet",
+        "sense":9,
+        "sense_definition":null,
+        "tokens":"['consistence', 'consistency', 'dead body', 'organic structure', 'soundbox', 'substance', 'torso', 'trunk']",
+        "annotation_remove":0
+    },
+    "29":{
+        "category":"burden",
+        "source":"merriam_webster",
+        "sense":0,
+        "sense_definition":"a mass or quantity of something taken up and carried, conveyed, or transported",
+        "tokens":"['cargo', 'draft', 'freight', 'haul', 'lading', 'load', 'loading', 'payload', 'weight']",
+        "annotation_remove":1
+    },
+    "30":{
+        "category":"burden",
+        "source":"merriam_webster",
+        "sense":1,
+        "sense_definition":"something one must do because of prior agreement",
+        "tokens":"['charge', 'commitment', 'devoir', 'do', 'duty', 'imperative', 'incumbency', 'need', 'obligation', 'office', 'responsibility']",
+        "annotation_remove":1
+    },
+    "31":{
+        "category":"burden",
+        "source":"merriam_webster",
+        "sense":2,
+        "sense_definition":"a part of a song or hymn that is repeated every so often",
+        "tokens":"['chorus', 'refrain']",
+        "annotation_remove":1
+    },
+    "32":{
+        "category":"burden",
+        "source":"merriam_webster",
+        "sense":3,
+        "sense_definition":"to place a weight or burden on",
+        "tokens":"['encumber', 'freight', 'lade', 'laden', 'load', 'lumber', 'saddle', 'weight']",
+        "annotation_remove":0
+    },
+    "33":{
+        "category":"burden",
+        "source":"merriam_webster",
+        "sense":4,
+        "sense_definition":"to make sad",
+        "tokens":"['bum (out)', 'dash', 'deject', 'depress', 'get down', 'oppress', 'sadden', 'weigh down']",
+        "annotation_remove":0
+    },
+    "34":{
+        "category":"burden",
+        "source":"synonym_com",
+        "sense":5,
+        "sense_definition":null,
+        "tokens":"['concern', 'dead weight', 'encumbrance', 'fardel', 'headache', 'imposition', 'incumbrance', 'load', 'onus', 'pill', 'worry']",
+        "annotation_remove":0
+    },
+    "35":{
+        "category":"burden",
+        "source":"thesaurus_com",
+        "sense":6,
+        "sense_definition":null,
+        "tokens":"['accountability', 'affliction', 'albatross', 'anxiety', 'ball and chain', 'blame', 'care', 'charge', 'clog', 'concern', 'deadweight', 'difficulty', 'duty', 'encumbrance', 'excess baggage', 'grievance', 'hardship', 'herculean task', 'hindrance', 'load', 'millstone', 'misfortune', 'mishap', 'obstruction', 'onus', 'punishment', 'responsibility', 'sorrow', 'strain', 'task', 'tax', \"thorn in one's side\", 'trial', 'trouble', 'weary load', 'work', 'worry']",
+        "annotation_remove":1
+    },
+    "36":{
+        "category":"burden",
+        "source":"wordnet",
+        "sense":7,
+        "sense_definition":null,
+        "tokens":"['core', 'effect', 'encumbrance', 'essence', 'gist', 'incumbrance', 'load', 'load', 'loading', 'onus']",
+        "annotation_remove":1
+    },
+    "37":{
+        "category":"cut",
+        "source":"merriam_webster",
+        "sense":0,
+        "sense_definition":"to penetrate with a sharp edge (as a knife)",
+        "tokens":"['gash', 'incise', 'rip', 'shear', 'slash', 'slice', 'slit']",
+        "annotation_remove":0
+    },
+    "38":{
+        "category":"cut",
+        "source":"merriam_webster",
+        "sense":1,
+        "sense_definition":"to fail to attend",
+        "tokens":"['blow off', 'miss', 'skip']",
+        "annotation_remove":0
+    },
+    "39":{
+        "category":"cut",
+        "source":"merriam_webster",
+        "sense":2,
+        "sense_definition":"to deliberately ignore or treat rudely",
+        "tokens":"['cold-shoulder', 'high-hat', 'slight', 'snub', 'stiff', 'stiff-arm']",
+        "annotation_remove":0
+    },
+    "40":{
+        "category":"cut",
+        "source":"merriam_webster",
+        "sense":3,
+        "sense_definition":"to make (something) shorter or smaller with the use of a cutting instrument",
+        "tokens":"['bob', 'clip', 'crop', 'cut back', 'dock', 'lop (off)', 'nip', 'pare', 'poll', 'prune', 'shave', 'shear', 'snip', 'trim']",
+        "annotation_remove":0
+    },
+    "41":{
+        "category":"cut",
+        "source":"merriam_webster",
+        "sense":4,
+        "sense_definition":"to shorten the standing leafy plant cover of",
+        "tokens":"['mow']",
+        "annotation_remove":0
+    },
+    "42":{
+        "category":"cut",
+        "source":"merriam_webster",
+        "sense":5,
+        "sense_definition":"to alter (something) for the worse with the addition of foreign or lower-grade substances",
+        "tokens":"['adulterate', 'dilute', 'extend', 'lace', 'sophisticate', 'thin', 'water down', 'weaken']",
+        "annotation_remove":0
+    },
+    "43":{
+        "category":"cut",
+        "source":"merriam_webster",
+        "sense":6,
+        "sense_definition":"to depart abruptly from a straight line or course",
+        "tokens":"['break', 'sheer', 'swerve', 'veer', 'yaw', 'zag', 'zig']",
+        "annotation_remove":0
+    },
+    "44":{
+        "category":"cut",
+        "source":"merriam_webster",
+        "sense":7,
+        "sense_definition":"to divide by passing through or across",
+        "tokens":"['bisect', 'cross', 'intersect']",
+        "annotation_remove":0
+    },
+    "45":{
+        "category":"cut",
+        "source":"merriam_webster",
+        "sense":8,
+        "sense_definition":"to identify and examine the basic elements or parts of (something) especially for discovering interrelationships",
+        "tokens":"['analyze', 'anatomize', 'assay', 'break down', 'deconstruct', 'dissect']",
+        "annotation_remove":0
+    },
+    "46":{
+        "category":"cut",
+        "source":"merriam_webster",
+        "sense":9,
+        "sense_definition":"a piece that has been separated from the whole by cutting",
+        "tokens":"['cutting', 'slice']",
+        "annotation_remove":0
+    },
+    "47":{
+        "category":"cut",
+        "source":"merriam_webster",
+        "sense":10,
+        "sense_definition":"an individual part of a process, series, or ranking",
+        "tokens":"['chapter', 'degree', 'grade', 'inch', 'notch', 'peg', 'phase', 'place', 'point', 'stage', 'step']",
+        "annotation_remove":0
+    },
+    "48":{
+        "category":"cut",
+        "source":"merriam_webster",
+        "sense":11,
+        "sense_definition":"something belonging to, due to, or contributed by an individual member of a group",
+        "tokens":"['allotment', 'allowance', 'end', 'part', 'piece', 'portion', 'proportion', 'quota', 'share', 'slice', 'take']",
+        "annotation_remove":0
+    },
+    "49":{
+        "category":"cut",
+        "source":"merriam_webster",
+        "sense":12,
+        "sense_definition":"a style or arrangement of hair",
+        "tokens":"['coiffure', 'do', 'haircut', 'hairdo', 'hairstyle']",
+        "annotation_remove":0
+    },
+    "50":{
+        "category":"cut",
+        "source":"merriam_webster",
+        "sense":13,
+        "sense_definition":"an act or expression showing scorn and usually intended to hurt another's feelings",
+        "tokens":"['affront', 'barb', 'brickbat', 'dart', 'dig', 'dis', 'diss', 'epithet', 'gird', 'indignity', 'insult', 'name', 'offense', 'offence', 'outrage', 'personality', 'poke', 'put-down', 'sarcasm', 'slap', 'slight', 'slur']",
+        "annotation_remove":0
+    },
+    "51":{
+        "category":"cut",
+        "source":"synonym_com",
+        "sense":14,
+        "sense_definition":null,
+        "tokens":"['bevel', 'bisect', 'bob', 'bore', 'break off', 'carve', 'chamfer', 'chase', 'chatter', 'chip', 'chip at', 'chop', 'circumcise', 'clip', 'cradle', 'crosscut', 'cube', 'cut across', 'cut away', 'cut down', 'cut off', 'cut up', 'dice', 'discerp', 'dissect', 'disunite', 'divide', 'dock', 'drill', 'drop', 'fell', 'furrow', 'gash', 'hack', 'hob', 'incise', 'indent', 'jag', 'julienne', 'knap', 'lop', 'manicure', 'mortice', 'mortise', 'mow', 'nick', 'nip', 'nip off', 'pare', 'part', 'pink', 'plane', 'rebate', 'rip', 'saber', 'sabre', 'saw', 'scissor', 'separate', 'sever', 'shave', 'shear', 'slash', 'slice', 'slice up', 'slit', 'snick', 'snip', 'snip off', 'strike down', 'tail', 'tap', 'tomahawk', 'transect', 'trench', 'trim', 'trisect', 'undercut', 'whittle']",
+        "annotation_remove":0
+    },
+    "52":{
+        "category":"cut",
+        "source":"thesaurus_com",
+        "sense":15,
+        "sense_definition":null,
+        "tokens":"['carving', 'chip', 'chop', 'cleavage', 'cleft', 'dissection', 'fissure', 'furrow', 'gash', 'graze', 'groove', 'kerf', 'laceration', 'nick', 'nip', 'notch', 'opening', 'penetration', 'prick', 'rabbet', 'rent', 'rip', 'scarification', 'section', 'shave', 'slash', 'slit', 'slot', 'snip', 'stab', 'stroke', 'trench', 'trim', 'wound']",
+        "annotation_remove":0
+    },
+    "53":{
+        "category":"cut",
+        "source":"wordnet",
+        "sense":16,
+        "sense_definition":null,
+        "tokens":"['baseball swing', 'cold shoulder', 'cut of meat', 'cutting', 'cutting', 'cutting', 'cutting', 'cutting off', 'deletion', 'excision', 'gash', 'gash', 'slash', 'slice', 'snub', 'stinger', 'swing', 'track', 'undercut']",
+        "annotation_remove":0
+    },
+    "54":{
+        "category":"defeated",
+        "source":"merriam_webster",
+        "sense":0,
+        "sense_definition":"as in depressed, dejected",
+        "tokens":"['beat', 'bested', 'conquered', 'did down', 'dispatched', 'got', 'got around', 'licked', 'mastered', 'overbore', 'overcame', 'overmatched', 'prevailed (over)', 'skunked', 'stopped', 'subdued', 'surmounted', 'took', 'trimmed', 'triumphed (over)', 'upended', 'won (against)', 'worsted']",
+        "annotation_remove":0
+    },
+    "55":{
+        "category":"defeated",
+        "source":"synonym_com",
+        "sense":1,
+        "sense_definition":null,
+        "tokens":"['disappointed', 'foiled', 'frustrated', 'thwarted', 'unsuccessful']",
+        "annotation_remove":0
+    },
+    "56":{
+        "category":"defeated",
+        "source":"thesaurus_com",
+        "sense":2,
+        "sense_definition":null,
+        "tokens":"['conquered', 'crushed', 'overcome']",
+        "annotation_remove":0
+    },
+    "57":{
+        "category":"defeated",
+        "source":"wordnet",
+        "sense":3,
+        "sense_definition":null,
+        "tokens":"['discomfited']",
+        "annotation_remove":0
+    },
+    "58":{
+        "category":"empty",
+        "source":"merriam_webster",
+        "sense":0,
+        "sense_definition":"lacking contents that could or should be present",
+        "tokens":"['bare', 'blank', 'clean', 'devoid', 'stark', 'toom', 'vacant', 'vacuous', 'void']",
+        "annotation_remove":1
+    },
+    "59":{
+        "category":"empty",
+        "source":"merriam_webster",
+        "sense":1,
+        "sense_definition":"feeling a desire or need for food",
+        "tokens":"['famished', 'hungry', 'peckish', 'starved', 'starving']",
+        "annotation_remove":1
+    },
+    "60":{
+        "category":"empty",
+        "source":"merriam_webster",
+        "sense":2,
+        "sense_definition":"having no meaning",
+        "tokens":"['inane', 'meaningless', 'pointless', 'senseless']",
+        "annotation_remove":0
+    },
+    "61":{
+        "category":"empty",
+        "source":"merriam_webster",
+        "sense":3,
+        "sense_definition":"having no usefulness",
+        "tokens":"['chaffy', 'junky', 'no-good', 'null', 'vain', 'valueless', 'worthless']",
+        "annotation_remove":1
+    },
+    "62":{
+        "category":"empty",
+        "source":"merriam_webster",
+        "sense":4,
+        "sense_definition":"producing no results",
+        "tokens":"['abortive', 'barren', 'bootless', 'fruitless', 'futile', 'ineffective', 'ineffectual', 'inefficacious', 'otiose', 'profitless', 'unavailing', 'unproductive', 'unprofitable', 'unsuccessful', 'useless', 'vain']",
+        "annotation_remove":1
+    },
+    "63":{
+        "category":"empty",
+        "source":"merriam_webster",
+        "sense":5,
+        "sense_definition":"not expressing any emotion",
+        "tokens":"['blank', 'catatonic', 'deadpan', 'expressionless', 'impassive', 'inexpressive', 'numb', 'stolid', 'vacant']",
+        "annotation_remove":0
+    },
+    "64":{
+        "category":"empty",
+        "source":"merriam_webster",
+        "sense":6,
+        "sense_definition":"to remove the contents of",
+        "tokens":"['clear', 'evacuate', 'vacate', 'void']",
+        "annotation_remove":1
+    },
+    "65":{
+        "category":"empty",
+        "source":"synonym_com",
+        "sense":7,
+        "sense_definition":null,
+        "tokens":"['bare', 'blank', 'clean', 'empty-handed', 'fullness', 'glazed', 'lifeless', 'looted', 'pillaged', 'plundered', 'ransacked', 'stripped', 'vacant', 'vacuous', 'void', 'white']",
+        "annotation_remove":1
+    },
+    "66":{
+        "category":"empty",
+        "source":"thesaurus_com",
+        "sense":8,
+        "sense_definition":null,
+        "tokens":"['abandoned', 'bare', 'barren', 'blank', 'clear', 'dead', 'deflated', 'depleted', 'desert', 'deserted', 'desolate', 'despoiled', 'destitute', 'devoid', 'dry', 'evacuated', 'exhausted', 'forsaken', 'godforsaken', 'hollow', 'hot-air', 'lacking', 'stark', 'unfilled', 'unfurnished', 'uninhabited', 'unoccupied', 'vacant', 'vacated', 'vacuous', 'void', 'wanting', 'waste']",
+        "annotation_remove":1
+    },
+    "67":{
+        "category":"escape",
+        "source":"merriam_webster",
+        "sense":0,
+        "sense_definition":"to get free from a dangerous or confining situation",
+        "tokens":"['abscond', 'break out (of)', 'clear out', 'flee', 'fly', 'get out', 'lam', 'run away', 'run off']",
+        "annotation_remove":0
+    },
+    "68":{
+        "category":"escape",
+        "source":"merriam_webster",
+        "sense":1,
+        "sense_definition":"to get or keep away from (as a responsibility) through cleverness or trickery",
+        "tokens":"['avoid', 'dodge', 'duck', 'elude', 'eschew', 'evade', 'finesse', 'get around', 'scape', 'shake', 'shirk', 'shuffle (out of)', 'shun', 'weasel (out of)']",
+        "annotation_remove":1
+    },
+    "69":{
+        "category":"escape",
+        "source":"merriam_webster",
+        "sense":2,
+        "sense_definition":"the act or an instance of getting free from danger or confinement",
+        "tokens":"['break', 'breakout', 'bunk', 'flight', 'getaway', 'lam', 'rout', 'slip']",
+        "annotation_remove":0
+    },
+    "70":{
+        "category":"escape",
+        "source":"merriam_webster",
+        "sense":3,
+        "sense_definition":"the act or a means of getting or keeping away from something undesirable",
+        "tokens":"['avoidance', 'cop-out', 'dodging', 'ducking', 'eluding', 'elusion', 'eschewal', 'eschewing', 'evasion', 'out', 'shaking', 'shunning']",
+        "annotation_remove":1
+    },
+    "71":{
+        "category":"escape",
+        "source":"synonym_com",
+        "sense":4,
+        "sense_definition":null,
+        "tokens":"['bilk', 'break', 'break away', 'break loose', 'break out', 'elude', 'escape from', 'evade', 'flee', 'fly', 'get away', 'shake', 'shake off', 'slip', 'take flight', 'throw off']",
+        "annotation_remove":0
+    },
+    "72":{
+        "category":"escape",
+        "source":"thesaurus_com",
+        "sense":5,
+        "sense_definition":null,
+        "tokens":"['abdication', 'avoidance', 'awol', 'beat', 'bolt', 'break', 'breakout', 'bypassing', 'circumvention', 'decampment', 'deliverance', 'departure', 'desertion', 'disappearance', 'dodging', 'ducking', 'elopement', 'elusion', 'elusiveness', 'eschewal', 'evasion', 'evasiveness', 'extrication', 'fadeout', 'flight', 'freedom', 'hegira', 'lam', 'leave', 'liberation', 'out', 'outbreak', 'powder', 'release', 'rescue', 'retreat', 'runaround', 'shunning', 'sidestepping', 'slip', 'spring', 'withdrawal']",
+        "annotation_remove":1
+    },
+    "73":{
+        "category":"escape",
+        "source":"wordnet",
+        "sense":6,
+        "sense_definition":null,
+        "tokens":"['dodging', 'escape cock', 'escape valve', 'escapism', 'evasion', 'flight', 'leak', 'leakage', 'outflow', 'relief valve', 'safety valve']",
+        "annotation_remove":0
+    },
+    "74":{
+        "category":"evil",
+        "source":"merriam_webster",
+        "sense":0,
+        "sense_definition":"that which is morally unacceptable",
+        "tokens":"['bad', 'evildoing', 'ill', 'immorality', 'iniquity', 'sin', 'villainy', 'wrong']",
+        "annotation_remove":0
+    },
+    "75":{
+        "category":"evil",
+        "source":"merriam_webster",
+        "sense":1,
+        "sense_definition":"causing or capable of causing harm",
+        "tokens":"['adverse', 'bad', 'baleful', 'baneful', 'damaging', 'dangerous', 'deleterious', 'detrimental', 'harmful', 'hurtful', 'ill', 'injurious', 'mischievous', 'nocuous', 'noxious', 'pernicious', 'prejudicial', 'wicked']",
+        "annotation_remove":0
+    },
+    "76":{
+        "category":"evil",
+        "source":"merriam_webster",
+        "sense":2,
+        "sense_definition":"not conforming to a high moral standard; morally unacceptable",
+        "tokens":"['bad', 'dark', 'immoral', 'iniquitous', 'nefarious', 'rotten', 'sinful', 'unethical', 'unlawful', 'unrighteous', 'unsavory', 'vicious', 'vile', 'villainous', 'wicked', 'wrong']",
+        "annotation_remove":0
+    },
+    "77":{
+        "category":"evil",
+        "source":"merriam_webster",
+        "sense":3,
+        "sense_definition":"causing intense displeasure, disgust, or resentment",
+        "tokens":"['abhorrent', 'abominable', 'appalling', 'awful', 'disgusting', 'distasteful', 'dreadful', 'foul', 'fulsome', 'gross', 'hideous', 'horrendous', 'horrible', 'horrid', 'loathsome', 'nasty', 'nauseating', 'nauseous', 'noisome', 'noxious', 'obnoxious', 'obscene', 'odious', 'offensive', 'rancid', 'repellent', 'repellant', 'repugnant', 'repulsive', 'revolting', 'scandalous', 'shocking', 'sickening', 'ugly']",
+        "annotation_remove":0
+    },
+    "78":{
+        "category":"evil",
+        "source":"synonym_com",
+        "sense":4,
+        "sense_definition":null,
+        "tokens":"['atrocious', 'bad', 'black', 'corruptive', 'dark', 'demonic', 'despicable', 'devilish', 'diabolic', 'diabolical', 'evil-minded', 'evilness', 'fiendish', 'flagitious', 'grievous', 'immoral', 'infernal', 'mephistophelean', 'mephistophelian', 'monstrous', 'offensive', 'perversive', 'pestiferous', 'satanic', 'sinister', 'slimy', 'ugly', 'unholy', 'unrighteous', 'unworthy', 'vile', 'wicked', 'worthless', 'wretched', 'wrong']",
+        "annotation_remove":0
+    },
+    "79":{
+        "category":"evil",
+        "source":"thesaurus_com",
+        "sense":5,
+        "sense_definition":null,
+        "tokens":"['angry', 'atrocious', 'bad', 'baneful', 'base', 'beastly', 'calamitous', 'corrupt', 'damnable', 'depraved', 'destructive', 'disastrous', 'execrable', 'flagitious', 'foul', 'harmful', 'hateful', 'heinous', 'hideous', 'iniquitous', 'injurious', 'loathsome', 'low', 'maleficent', 'malevolent', 'malicious', 'malignant', 'nefarious', 'no good', 'obscene', 'offensive', 'pernicious', 'poison', 'rancorous', 'reprobate', 'repugnant', 'repulsive', 'revolting', 'spiteful', 'stinking', 'ugly', 'unpleasant', 'unpropitious', 'vicious', 'vile', 'villainous', 'wicked', 'wrathful', 'wrong']",
+        "annotation_remove":0
+    },
+    "80":{
+        "category":"evil",
+        "source":"wordnet",
+        "sense":6,
+        "sense_definition":null,
+        "tokens":"['evilness', 'immorality', 'iniquity', 'wickedness']",
+        "annotation_remove":0
+    },
+    "81":{
+        "category":"fatigued",
+        "source":"merriam_webster",
+        "sense":0,
+        "sense_definition":"depleted in strength, energy, or freshness",
+        "tokens":"['all in', 'aweary', 'beat', 'beaten', 'bleary', 'burned-out', 'burnt-out', 'bushed', 'dead', 'done', 'drained', 'exhausted', 'jaded', 'knackered', 'limp', 'logy', 'loggy', 'played out', 'pooped', 'prostrate', 'spent', 'tapped out', 'tired', 'tuckered (out)', 'washed-out', 'wearied', 'weary', 'wiped out', 'worn', 'worn-out']",
+        "annotation_remove":0
+    },
+    "82":{
+        "category":"fatigued",
+        "source":"merriam_webster",
+        "sense":1,
+        "sense_definition":"to use up all the physical energy of",
+        "tokens":"['broke', 'burned out', 'burnt out', 'busted', 'bust', 'did in', 'did up', 'drained', 'exhausted', 'fagged', 'frazzled', 'harassed', 'killed', 'knocked out', 'outwore', 'tired', 'tuckered (out)', 'washed out', 'wearied', 'wore', 'wore out']",
+        "annotation_remove":0
+    },
+    "83":{
+        "category":"fatigued",
+        "source":"synonym_com",
+        "sense":2,
+        "sense_definition":null,
+        "tokens":"['exhausted', 'fagged', 'played out', 'spent', 'tired', 'washed-out', 'worn out', 'worn-out']",
+        "annotation_remove":0
+    },
+    "84":{
+        "category":"fatigued",
+        "source":"thesaurus_com",
+        "sense":3,
+        "sense_definition":null,
+        "tokens":"['all in', 'beat', 'bedraggled', 'blas\u00e9', 'burned out', 'bushed', 'dead', 'dead tired', 'dead-beat', 'dog-tired', 'dog-weary', 'done in', 'droopy', 'dropping', 'enervated', 'exhausted', 'fagged out', 'jaded', 'languid', 'languorous', 'lassitudinous', 'listless', 'out of gas', 'overtired', 'played-out', 'pooped', 'prostrate', 'ready to drop', 'spent', 'tuckered', 'washed out', 'wasted', 'weary', 'worn', 'worn-out', 'zonked']",
+        "annotation_remove":0
+    },
+    "85":{
+        "category":"fighting",
+        "source":"merriam_webster",
+        "sense":0,
+        "sense_definition":"as in battling, warring",
+        "tokens":"['battling', 'clashing (with)', 'combating', 'combatting', 'scrimmaging (with)', 'skirmishing (with)', 'warring (against)']",
+        "annotation_remove":0
+    },
+    "86":{
+        "category":"fighting",
+        "source":"merriam_webster",
+        "sense":1,
+        "sense_definition":"as in combat, warfare",
+        "tokens":"['battling', 'combating', 'combatting', 'contending (with)', 'countering', 'opposing', 'oppugning']",
+        "annotation_remove":0
+    },
+    "87":{
+        "category":"fighting",
+        "source":"merriam_webster",
+        "sense":2,
+        "sense_definition":"to oppose (someone) in physical conflict",
+        "tokens":"['battling', 'competing', 'contending', 'facing off', 'racing', 'rivaling', 'rivalling', 'vying']",
+        "annotation_remove":1
+    },
+    "88":{
+        "category":"fighting",
+        "source":"merriam_webster",
+        "sense":3,
+        "sense_definition":"to strive to reduce or eliminate",
+        "tokens":"['altercating', 'argufying', 'arguing', 'bickering', 'brabbling', 'brawling', 'controverting', 'disputing', 'falling out', 'hassling', 'jarring', 'quarreling', 'quarrelling', 'quibbling', 'rowing', 'scrapping', 'spatting', 'squabbling', 'tiffing', 'wrangling']",
+        "annotation_remove":0
+    },
+    "89":{
+        "category":"fighting",
+        "source":"merriam_webster",
+        "sense":4,
+        "sense_definition":"to engage in a contest",
+        "tokens":"['bucking', 'defying', 'opposing', 'repelling', 'resisting', 'withstanding']",
+        "annotation_remove":1
+    },
+    "90":{
+        "category":"fighting",
+        "source":"synonym_com",
+        "sense":5,
+        "sense_definition":null,
+        "tokens":"[\"affaire d'honneur\", 'affray', 'banging', 'battering', 'battle', 'beating', 'blow', 'brawl', 'brush', 'clash', 'close-quarter fighting', 'combat', 'conflict', 'cut-and-thrust', 'disturbance', 'dogfight', 'duel', 'encounter', 'fencing', 'fight', 'fistfight', 'fisticuffs', 'fray', 'free-for-all', 'gang fight', 'gunfight', 'gunplay', 'hassle', 'impact', 'in-fighting', 'knife fight', 'rough-and-tumble', 'ruffle', 'rumble', 'scrap', 'scuffle', 'set-to', 'shock', 'shootout', 'single combat', 'skirmish', 'slugfest', 'snickersnee', 'tussle', 'whipping']",
+        "annotation_remove":0
+    },
+    "91":{
+        "category":"fighting",
+        "source":"thesaurus_com",
+        "sense":6,
+        "sense_definition":null,
+        "tokens":"['angry', 'argumentative', 'battling', 'bellicose', 'belligerent', 'boxing', 'brawling', 'combative', 'contending', 'contentious', 'determined', 'disputatious', 'disputative', 'fencing', 'ferocious', 'hawkish', 'hostile', 'jingoistic', 'jousting', 'martial', 'militant', 'militaristic', 'pugnacious', 'quarrelsome', 'ready to fight', 'resolute', 'scrappy', 'sparring', 'tilting', 'truculent', 'unbeatable', 'under arms', 'up in arms', 'warmongering', 'wrestling']",
+        "annotation_remove":0
+    },
+    "92":{
+        "category":"fighting",
+        "source":"wordnet",
+        "sense":7,
+        "sense_definition":null,
+        "tokens":"['combat', 'fight', 'scrap']",
+        "annotation_remove":0
+    },
+    "93":{
+        "category":"grief",
+        "source":"merriam_webster",
+        "sense":0,
+        "sense_definition":"deep sadness especially for the loss of someone or something loved",
+        "tokens":"['affliction', 'anguish', 'dolefulness', 'dolor', 'heartache', 'heartbreak', 'sorriness', 'sorrow', 'woe']",
+        "annotation_remove":0
+    },
+    "94":{
+        "category":"grief",
+        "source":"merriam_webster",
+        "sense":1,
+        "sense_definition":"the feeling of impatience or anger caused by another's repeated disagreeable acts",
+        "tokens":"['aggravation', 'aggro', 'annoyance', 'bother', 'botheration', 'exasperation', 'frustration', 'irritation', 'pip', 'vexation']",
+        "annotation_remove":0
+    },
+    "95":{
+        "category":"grief",
+        "source":"synonym_com",
+        "sense":2,
+        "sense_definition":null,
+        "tokens":"['brokenheartedness', 'dolor', 'dolour', 'heartache', 'heartbreak']",
+        "annotation_remove":0
+    },
+    "96":{
+        "category":"grief",
+        "source":"thesaurus_com",
+        "sense":3,
+        "sense_definition":null,
+        "tokens":"['affliction', 'agony', 'anguish', 'bemoaning', 'bereavement', 'bewailing', 'care', 'dejection', 'deploring', 'depression', 'desolation', 'despair', 'despondency', 'discomfort', 'disquiet', 'distress', 'dole', 'dolor', 'gloom', 'grievance', 'harassment', 'heartache', 'heartbreak', 'infelicity', 'lamentation', 'lamenting', 'malaise', 'melancholy', 'misery', 'mortification', 'mournfulness', 'mourning', 'pain', 'purgatory', 'regret', 'remorse', 'repining', 'rue', 'sadness', 'sorrow', 'torture', 'trial', 'tribulation', 'trouble', 'unhappiness', 'vexation', 'woe', 'worry', 'wretchedness']",
+        "annotation_remove":0
+    },
+    "97":{
+        "category":"grief",
+        "source":"wordnet",
+        "sense":4,
+        "sense_definition":null,
+        "tokens":"['brokenheartedness', 'heartache', 'heartbreak', 'sorrow']",
+        "annotation_remove":0
+    },
+    "98":{
+        "category":"guilt",
+        "source":"merriam_webster",
+        "sense":0,
+        "sense_definition":"a feeling of responsibility for wrongdoing",
+        "tokens":"['contriteness', 'contrition', 'penitence', 'regret', 'remorse', 'remorsefulness', 'repentance', 'rue', 'self-reproach', 'shame']",
+        "annotation_remove":0
+    },
+    "99":{
+        "category":"guilt",
+        "source":"merriam_webster",
+        "sense":1,
+        "sense_definition":"responsibility for wrongdoing or failure",
+        "tokens":"['blame', 'culpability', 'fault', 'onus', 'rap']",
+        "annotation_remove":0
+    },
+    "100":{
+        "category":"guilt",
+        "source":"synonym_com",
+        "sense":2,
+        "sense_definition":null,
+        "tokens":"['bloodguilt', 'complicity', 'condition', 'criminalism', 'criminality', 'criminalness', 'culpability', 'culpableness', 'guilt by association', 'guiltiness', 'impeachability', 'indictability', 'status']",
+        "annotation_remove":0
+    },
+    "101":{
+        "category":"guilt",
+        "source":"thesaurus_com",
+        "sense":3,
+        "sense_definition":null,
+        "tokens":"['answerability', 'blameworthiness', 'contrition', 'crime', 'criminality', 'culpability', 'delinquency', 'dereliction', 'disgrace', 'dishonor', 'error', 'failing', 'fault', 'indiscretion', 'infamy', 'iniquity', 'lapse', 'liability', 'malefaction', 'malfeasance', 'malpractice', 'misbehavior', 'misconduct', 'misstep', 'offense', 'onus', 'peccability', 'penitence', 'regret', 'remorse', 'responsibility', 'self-condemnation', 'self-reproach', 'shame', 'sin', 'sinfulness', 'slip', 'solecism', 'stigma', 'transgression', 'wickedness', 'wrong']",
+        "annotation_remove":0
+    },
+    "102":{
+        "category":"guilt",
+        "source":"wordnet",
+        "sense":4,
+        "sense_definition":null,
+        "tokens":"['guilt feelings', 'guilt trip', 'guiltiness', 'guilty conscience']",
+        "annotation_remove":0
+    },
+    "103":{
+        "category":"hate",
+        "source":"merriam_webster",
+        "sense":0,
+        "sense_definition":"to dislike strongly",
+        "tokens":"['abhor', 'abominate', 'despise', 'detest', 'execrate', 'loathe']",
+        "annotation_remove":0
+    },
+    "104":{
+        "category":"hate",
+        "source":"merriam_webster",
+        "sense":1,
+        "sense_definition":"a very strong dislike",
+        "tokens":"['abhorrence', 'abomination', 'detestation', 'execration', 'hatred', 'loathing']",
+        "annotation_remove":0
+    },
+    "105":{
+        "category":"hate",
+        "source":"merriam_webster",
+        "sense":2,
+        "sense_definition":"something or someone that is hated",
+        "tokens":"['abhorrence', 'abomination', 'anathema', 'antipathy', 'aversion', 'b\u00eate noire', 'detestation', 'execration']",
+        "annotation_remove":0
+    },
+    "106":{
+        "category":"hate",
+        "source":"synonym_com",
+        "sense":3,
+        "sense_definition":null,
+        "tokens":"['abhor', 'abominate', 'despise', 'detest', 'disdain', 'dislike', 'execrate', 'loathe', 'scorn']",
+        "annotation_remove":0
+    },
+    "107":{
+        "category":"hate",
+        "source":"thesaurus_com",
+        "sense":4,
+        "sense_definition":null,
+        "tokens":"['abhorrence', 'abomination', 'anathema', 'animosity', 'animus', 'antagonism', 'antipathy', 'aversion', 'black beast', 'bother', 'bugbear', 'b\u00eate noire', 'detestation', 'disgust', 'dislike', 'enmity', 'execration', 'frost', 'grievance', 'gripe', 'hatred', 'horror', 'hostility', 'ill will', 'irritant', 'loathing', 'malevolence', 'malignity', 'mislike', 'nasty look', 'no love lost', 'nuisance', 'objection', 'odium', 'pain', 'rancor', 'rankling', 'repugnance', 'repulsion', 'resentment', 'revenge', 'revulsion', 'scorn', 'spite', 'trouble', 'venom']",
+        "annotation_remove":0
+    },
+    "108":{
+        "category":"hate",
+        "source":"wordnet",
+        "sense":5,
+        "sense_definition":null,
+        "tokens":"['hatred']",
+        "annotation_remove":0
+    },
+    "109":{
+        "category":"healthy",
+        "source":"merriam_webster",
+        "sense":0,
+        "sense_definition":"enjoying health and vigor",
+        "tokens":"['able-bodied', 'bouncing', 'fit', 'hale', 'hearty', 'robust', 'sound', 'well', 'well-conditioned', 'whole', 'wholesome']",
+        "annotation_remove":0
+    },
+    "110":{
+        "category":"healthy",
+        "source":"merriam_webster",
+        "sense":1,
+        "sense_definition":"beneficial to the health of body or mind",
+        "tokens":"['good', 'healthful', 'medicinal', 'restorative', 'salubrious', 'salutary', 'salutiferous', 'sanative', 'tonic', 'wholesome']",
+        "annotation_remove":0
+    },
+    "111":{
+        "category":"healthy",
+        "source":"merriam_webster",
+        "sense":2,
+        "sense_definition":"sufficiently large in size, amount, or number to merit attention",
+        "tokens":"['biggish', 'considerable', 'good', 'goodly', 'handsome', 'largish', 'major', 'respectable', 'significant', 'sizable', 'sizeable', 'substantial', 'substantive', 'tidy']",
+        "annotation_remove":0
+    },
+    "112":{
+        "category":"healthy",
+        "source":"merriam_webster",
+        "sense":3,
+        "sense_definition":"marked by vigorous growth and well-being especially economically",
+        "tokens":"['booming', 'boomy', 'flourishing', 'golden', 'halcyon', 'lush', 'palmy', 'prospering', 'prosperous', 'roaring', 'successful', 'thriving']",
+        "annotation_remove":0
+    },
+    "113":{
+        "category":"healthy",
+        "source":"synonym_com",
+        "sense":4,
+        "sense_definition":null,
+        "tokens":"['anicteric', 'bouncing', 'firm', 'fit', 'florid', 'flushed', 'full-blooded', 'good', 'hale', 'health', 'hearty', 'lusty', 'red-blooded', 'robust', 'rock-loving', 'rose-cheeked', 'rosy', 'rosy-cheeked', 'ruddy', 'sanguine', 'sound', 'sun-loving', 'water-loving', 'well', 'well-preserved', 'wellness', 'whole', 'wholesome']",
+        "annotation_remove":0
+    },
+    "114":{
+        "category":"healthy",
+        "source":"thesaurus_com",
+        "sense":5,
+        "sense_definition":null,
+        "tokens":"['able-bodied', 'active', 'all right', 'athletic', 'blooming', 'bright-eyed', 'bushy-tailed', 'chipper', 'firm', 'fit', 'flourishing', 'fresh', 'full of life', 'hale', 'hardy', 'healthful', 'hearty', 'husky', 'in fine feather', 'in fine fettle', 'in good shape', 'in the pink', 'lively', 'lusty', 'muscular', 'normal', 'physically fit', 'potent', 'restored', 'robust', 'rosy-cheeked', 'safe and sound', 'sound', 'stout', 'strong', 'sturdy', 'tough', 'trim', 'unimpaired', 'vigorous', 'virile', 'well', 'whole']",
+        "annotation_remove":0
+    },
+    "115":{
+        "category":"hopeless",
+        "source":"merriam_webster",
+        "sense":0,
+        "sense_definition":"not capable of being cured or reformed",
+        "tokens":"['incorrigible', 'incurable', 'irrecoverable', 'irredeemable', 'irreformable', 'irremediable', 'irretrievable', 'unrecoverable', 'unredeemable']",
+        "annotation_remove":0
+    },
+    "116":{
+        "category":"hopeless",
+        "source":"merriam_webster",
+        "sense":1,
+        "sense_definition":"emphasizing or expecting the worst",
+        "tokens":"['bearish', 'defeatist', 'despairing', 'downbeat', 'pessimistic']",
+        "annotation_remove":0
+    },
+    "117":{
+        "category":"hopeless",
+        "source":"merriam_webster",
+        "sense":2,
+        "sense_definition":"incapable of being solved or accomplished",
+        "tokens":"['impossible', 'insoluble', 'insolvable', 'insuperable', 'unattainable', 'undoable', 'unrealizable', 'unsolvable']",
+        "annotation_remove":0
+    },
+    "118":{
+        "category":"hopeless",
+        "source":"merriam_webster",
+        "sense":3,
+        "sense_definition":"feeling or showing no hope",
+        "tokens":"['despairing', 'desperate', 'despondent', 'forlorn']",
+        "annotation_remove":0
+    },
+    "119":{
+        "category":"hopeless",
+        "source":"synonym_com",
+        "sense":4,
+        "sense_definition":null,
+        "tokens":"['black', 'bleak', 'despairing', 'desperate', 'despondent', 'dim', 'discouraging', 'forlorn', 'futureless', 'heartsick', 'helpless', 'impossible', 'insoluble', 'lost', 'pessimistic', 'unhopeful']",
+        "annotation_remove":1
+    },
+    "120":{
+        "category":"hopeless",
+        "source":"thesaurus_com",
+        "sense":5,
+        "sense_definition":null,
+        "tokens":"['bad', 'beyond recall', 'cynical', 'dejected', 'demoralized', 'despairing', 'desperate', 'despondent', 'disconsolate', 'discouraging', 'downhearted', 'fatal', 'forlorn', 'gone', 'goner', 'helpless', 'ill-fated', 'impossible', 'impracticable', 'in despair', 'incurable', 'irredeemable', 'irreparable', 'irreversible', 'irrevocable', 'lost', 'menacing', 'no-win', 'past hope', 'pointless', 'sad', 'shot down', 'sinister', 'sunk', 'threatening', 'tragic', 'unachievable', 'unavailing', 'unfortunate', 'unmitigable', 'up the creek', 'useless', 'vain', 'woebegone', 'worsening']",
+        "annotation_remove":1
+    },
+    "121":{
+        "category":"insomnia",
+        "source":"merriam_webster",
+        "sense":0,
+        "sense_definition":"the inability to obtain adequate sleep",
+        "tokens":"['sleeplessness', 'wakefulness']",
+        "annotation_remove":0
+    },
+    "122":{
+        "category":"insomnia",
+        "source":"thesaurus_com",
+        "sense":1,
+        "sense_definition":null,
+        "tokens":"['indisposition', 'insomnolence', 'restlessness', 'sleeplessness', 'stress', 'tension', 'vigil', 'vigilance', 'wakefulness', []]",
+        "annotation_remove":0
+    },
+    "123":{
+        "category":"insomnia",
+        "source":"manual",
+        "sense":2,
+        "sense_definition":null,
+        "tokens":"[\"can't sleep\", 'tired', 'exhausted']",
+        "annotation_remove":0
+    },
+    "124":{
+        "category":"kin",
+        "source":"merriam_webster",
+        "sense":0,
+        "sense_definition":"a group of persons who come from the same ancestor",
+        "tokens":"['blood', 'clan', 'family', 'folks', 'house', 'kindred', 'kinfolk', 'kinfolks', 'kinsfolk', 'line', 'lineage', 'people', 'race', 'stock', 'tribe']",
+        "annotation_remove":0
+    },
+    "125":{
+        "category":"kin",
+        "source":"merriam_webster",
+        "sense":1,
+        "sense_definition":"a person connected with another by blood or marriage",
+        "tokens":"['cousin', 'kinsman', 'relation', 'relative']",
+        "annotation_remove":0
+    },
+    "126":{
+        "category":"kin",
+        "source":"synonym_com",
+        "sense":2,
+        "sense_definition":null,
+        "tokens":"['affine', 'family', 'kinsperson', 'relative']",
+        "annotation_remove":0
+    },
+    "127":{
+        "category":"kin",
+        "source":"thesaurus_com",
+        "sense":3,
+        "sense_definition":null,
+        "tokens":"['affinity', 'blood', 'clan', 'connection', 'consanguinity', 'cousin', 'extraction', 'family', 'folk', 'house', 'kindred', 'kinsfolk', 'kinship', 'kinsperson', 'kith', 'lineage', 'member', 'people', 'race', 'relation', 'relationship', 'sibling', 'stock', 'tribe']",
+        "annotation_remove":0
+    },
+    "128":{
+        "category":"kin",
+        "source":"wordnet",
+        "sense":4,
+        "sense_definition":null,
+        "tokens":"['clan', 'family', 'kin group', 'kindred', 'kinship group', 'kinsperson', 'tribe']",
+        "annotation_remove":0
+    },
+    "129":{
+        "category":"lonely",
+        "source":"merriam_webster",
+        "sense":0,
+        "sense_definition":"not being in the company of others",
+        "tokens":"['alone', 'lone', 'lonesome', 'single', 'solitary', 'solo', 'unaccompanied']",
+        "annotation_remove":0
+    },
+    "130":{
+        "category":"lonely",
+        "source":"merriam_webster",
+        "sense":1,
+        "sense_definition":"sad from lack of companionship or separation from others",
+        "tokens":"['desolate', 'forlorn', 'lonesome', 'lorn']",
+        "annotation_remove":0
+    },
+    "131":{
+        "category":"lonely",
+        "source":"merriam_webster",
+        "sense":2,
+        "sense_definition":"causing or marked by an atmosphere lacking in cheer",
+        "tokens":"['black', 'bleak', 'cheerless', 'chill', 'cimmerian', 'cloudy', 'cold', 'comfortless', 'dark', 'darkening', 'depressing', 'depressive', 'desolate', 'dire', 'disconsolate', 'dismal', 'drear', 'dreary', 'dreich', 'elegiac', 'elegiacal', 'forlorn', 'funereal', 'gloomy', 'glum', 'godforsaken', 'gray', 'grey', 'lonesome', 'lugubrious', 'miserable', 'morbid', 'morose', 'murky', 'plutonian', 'saturnine', 'sepulchral', 'solemn', 'somber', 'sombre', 'sullen', 'sunless', 'tenebrific', 'tenebrous', 'wretched']",
+        "annotation_remove":1
+    },
+    "132":{
+        "category":"lonely",
+        "source":"synonym_com",
+        "sense":3,
+        "sense_definition":null,
+        "tokens":"['dejected']",
+        "annotation_remove":0
+    },
+    "133":{
+        "category":"lonely",
+        "source":"thesaurus_com",
+        "sense":4,
+        "sense_definition":null,
+        "tokens":"['abandoned', 'alone', 'apart', 'by oneself', 'comfortless', 'companionless', 'deserted', 'desolate', 'destitute', 'disconsolate', 'down', 'empty', 'estranged', 'forsaken', 'godforsaken', 'homeless', 'isolated', 'left', 'lone', 'lonesome', 'outcast', 'reclusive', 'rejected', 'renounced', 'secluded', 'single', 'solitary', 'troglodytic', 'unattended', 'unbefriended', 'uncherished', 'unsocial', 'withdrawn']",
+        "annotation_remove":0
+    },
+    "134":{
+        "category":"love",
+        "source":"merriam_webster",
+        "sense":0,
+        "sense_definition":"to hold dear",
+        "tokens":"['appreciate', 'cherish', 'prize', 'treasure', 'value']",
+        "annotation_remove":0
+    },
+    "135":{
+        "category":"love",
+        "source":"merriam_webster",
+        "sense":1,
+        "sense_definition":"to feel passion, devotion, or tenderness for",
+        "tokens":"['adore', 'cherish', 'worship']",
+        "annotation_remove":0
+    },
+    "136":{
+        "category":"love",
+        "source":"merriam_webster",
+        "sense":2,
+        "sense_definition":"to take pleasure in",
+        "tokens":"['adore', 'delight (in)', 'dig', 'enjoy', 'fancy', 'get off (on)', 'groove (on)', 'like', 'rejoice (in)', 'relish', 'revel (in)', 'savor', 'savour']",
+        "annotation_remove":0
+    },
+    "137":{
+        "category":"love",
+        "source":"merriam_webster",
+        "sense":3,
+        "sense_definition":"to touch or handle in a tender or loving manner",
+        "tokens":"['caress', 'fondle', 'gentle', 'pat', 'pet', 'stroke']",
+        "annotation_remove":0
+    },
+    "138":{
+        "category":"love",
+        "source":"merriam_webster",
+        "sense":4,
+        "sense_definition":"a feeling of strong or constant regard for and dedication to someone",
+        "tokens":"['affection', 'attachment', 'devotedness', 'devotion', 'fondness', 'passion']",
+        "annotation_remove":0
+    },
+    "139":{
+        "category":"love",
+        "source":"merriam_webster",
+        "sense":5,
+        "sense_definition":"a person with whom one is in love",
+        "tokens":"['beloved', 'darling', 'dear', 'flame', 'hon', 'honey', 'squeeze', 'sweet', 'sweetheart', 'sweetie', 'sweetie pie', 'truelove']",
+        "annotation_remove":0
+    },
+    "140":{
+        "category":"love",
+        "source":"merriam_webster",
+        "sense":6,
+        "sense_definition":"positive regard for something",
+        "tokens":"['appetite', 'fancy', 'favor', 'fondness', 'like', 'liking', 'love affair', 'partiality', 'preference', 'relish', 'shine', 'taste', 'use']",
+        "annotation_remove":0
+    },
+    "141":{
+        "category":"love",
+        "source":"merriam_webster",
+        "sense":7,
+        "sense_definition":"a brief romantic relationship",
+        "tokens":"['affair', 'affaire', 'amour', 'fling', 'love affair', 'romance']",
+        "annotation_remove":0
+    },
+    "142":{
+        "category":"love",
+        "source":"synonym_com",
+        "sense":8,
+        "sense_definition":null,
+        "tokens":"['affection', 'agape', 'agape love', 'amorousness', 'ardor', 'ardour', 'benevolence', 'caring', 'crush', 'devotedness', 'devotion', 'emotion', 'enamoredness', 'filial love', 'infatuation', 'lovingness', 'loyalty', 'puppy love', 'worship', 'yearning']",
+        "annotation_remove":0
+    },
+    "143":{
+        "category":"love",
+        "source":"thesaurus_com",
+        "sense":9,
+        "sense_definition":null,
+        "tokens":"['adulation', 'affection', 'allegiance', 'amity', 'amorousness', 'amour', 'appreciation', 'ardency', 'ardor', 'attachment', 'case', 'cherishing', 'crush', 'delight', 'devotedness', 'devotion', 'emotion', 'enchantment', 'enjoyment', 'fervor', 'fidelity', 'flame', 'fondness', 'friendship', 'hankering', 'idolatry', 'inclination', 'infatuation', 'involvement', 'like', 'lust', 'mad for', 'partiality', 'passion', 'piety', 'rapture', 'regard', 'relish', 'respect', 'sentiment', 'soft spot', 'tenderness', 'weakness', 'worship', 'yearning', 'zeal']",
+        "annotation_remove":0
+    },
+    "144":{
+        "category":"love",
+        "source":"wordnet",
+        "sense":10,
+        "sense_definition":null,
+        "tokens":"['beloved', 'dear', 'dearest', 'erotic love', 'honey', 'love life', 'lovemaking', 'making love', 'passion', 'sexual love', 'sexual love']",
+        "annotation_remove":0
+    },
+    "145":{
+        "category":"pain",
+        "source":"merriam_webster",
+        "sense":0,
+        "sense_definition":"a sharp unpleasant sensation usually felt in some specific part of the body",
+        "tokens":"['ache', 'pang', 'prick', 'shoot', 'smart', 'sting', 'stitch', 'throe', 'tingle', 'twinge']",
+        "annotation_remove":0
+    },
+    "146":{
+        "category":"pain",
+        "source":"merriam_webster",
+        "sense":1,
+        "sense_definition":"a state of great suffering of body or mind",
+        "tokens":"['affliction', 'agony', 'anguish', 'distress', 'excruciation', 'hurt', 'misery', 'rack', 'strait(s)', 'torment', 'torture', 'travail', 'tribulation', 'woe']",
+        "annotation_remove":0
+    },
+    "147":{
+        "category":"pain",
+        "source":"merriam_webster",
+        "sense":2,
+        "sense_definition":"strict attentiveness to what one is doing",
+        "tokens":"['care', 'carefulness', 'closeness', 'conscientiousness', 'heed', 'heedfulness', 'meticulosity', 'meticulousness', 'scrupulousness']",
+        "annotation_remove":0
+    },
+    "148":{
+        "category":"pain",
+        "source":"merriam_webster",
+        "sense":3,
+        "sense_definition":"the active use of energy in producing a result",
+        "tokens":"['effort', 'elbow grease', 'exertion', 'expenditure', 'labor', 'sweat', 'trouble', 'while', 'work']",
+        "annotation_remove":0
+    },
+    "149":{
+        "category":"pain",
+        "source":"merriam_webster",
+        "sense":4,
+        "sense_definition":"one who is obnoxiously annoying",
+        "tokens":"['annoyance', 'annoyer', 'bother', 'gadfly', 'gnawer', 'nudnik', 'nudnick', 'nuisance', 'persecutor', 'pest', 'tease', 'teaser']",
+        "annotation_remove":0
+    },
+    "150":{
+        "category":"pain",
+        "source":"merriam_webster",
+        "sense":5,
+        "sense_definition":"to feel or cause physical pain",
+        "tokens":"['ache', 'hurt', 'smart']",
+        "annotation_remove":0
+    },
+    "151":{
+        "category":"pain",
+        "source":"synonym_com",
+        "sense":6,
+        "sense_definition":null,
+        "tokens":"['ache', 'aching', 'agony', 'arthralgia', 'burn', 'burning', 'causalgia', 'chest pain', 'chiralgia', 'colic', 'costalgia', 'distress', 'dysmenorrhea', 'excruciation', 'glossalgia', 'glossodynia', 'gripes', 'griping', 'growing pains', 'haemorrhoid', 'hemorrhoid', 'hurting', 'intestinal colic', 'keratalgia', 'labor pain', 'mastalgia', 'melagra', 'meralgia', 'metralgia', 'myalgia', 'nephralgia', 'neuralgia', 'neuralgy', 'odynophagia', 'orchidalgia', 'pang', 'photalgia', 'photophobia', 'piles', 'pleuralgia', 'pleurodynia', 'podalgia', 'proctalgia', 'rawness', 'referred pain', 'renal colic', 'smart', 'smarting', 'smartness', 'soreness', 'sting', 'stinging', 'stitch', 'suffering', 'symptom', 'tenderness', 'thermalgesia', 'throb', 'torment', 'torture', 'ulalgia', 'urodynia']",
+        "annotation_remove":0
+    },
+    "152":{
+        "category":"pain",
+        "source":"thesaurus_com",
+        "sense":7,
+        "sense_definition":null,
+        "tokens":"['ache', 'affliction', 'agony', 'burn', 'catch', 'convulsion', 'cramp', 'crick', 'discomfort', 'distress', 'fever', 'gripe', 'hurt', 'illness', 'injury', 'irritation', 'laceration', 'malady', 'misery', 'pang', 'paroxysm', 'prick', 'sickness', 'smarting', 'soreness', 'spasm', 'sting', 'stitch', 'strain', 'tenderness', 'throb', 'throe', 'tingle', 'torment', 'torture', 'trouble', 'twinge', 'wound']",
+        "annotation_remove":0
+    },
+    "153":{
+        "category":"pain",
+        "source":"wordnet",
+        "sense":8,
+        "sense_definition":null,
+        "tokens":"['annoyance', 'bother', 'botheration', 'hurting', 'infliction', 'nuisance', 'pain in the ass', 'pain in the neck', 'pain in the neck', 'pain sensation', 'painful sensation', 'painfulness']",
+        "annotation_remove":0
+    },
+    "154":{
+        "category":"paranoid",
+        "source":"synonym_com",
+        "sense":0,
+        "sense_definition":null,
+        "tokens":"[' paranoiac ', ' psycho ', ' psychotic ']",
+        "annotation_remove":0
+    },
+    "155":{
+        "category":"paranoid",
+        "source":"thesaurus_com",
+        "sense":1,
+        "sense_definition":null,
+        "tokens":"['overly suspicious', 'unreasonably']",
+        "annotation_remove":0
+    },
+    "156":{
+        "category":"paranoid",
+        "source":"wordnet",
+        "sense":2,
+        "sense_definition":null,
+        "tokens":"['paranoiac']",
+        "annotation_remove":0
+    },
+    "157":{
+        "category":"poor",
+        "source":"merriam_webster",
+        "sense":0,
+        "sense_definition":"lacking money or material possessions",
+        "tokens":"['beggared', 'beggarly', 'broke', 'destitute', 'dirt-poor', 'down-and-out', 'famished', 'hard up', 'impecunious', 'impoverished', 'indigent', 'necessitous', 'needful', 'needy', 'pauperized', 'penniless', 'penurious', 'poverty-stricken', 'skint', 'threadbare']",
+        "annotation_remove":0
+    },
+    "158":{
+        "category":"poor",
+        "source":"merriam_webster",
+        "sense":1,
+        "sense_definition":"producing inferior or only a small amount of vegetation",
+        "tokens":"['barren', 'bony', 'boney', 'dead', 'desolate', 'hardscrabble', 'impoverished', 'infertile', 'stark', 'unfertile', 'unproductive', 'waste']",
+        "annotation_remove":0
+    },
+    "159":{
+        "category":"poor",
+        "source":"merriam_webster",
+        "sense":2,
+        "sense_definition":"less plentiful than what is normal, necessary, or desirable",
+        "tokens":"['exiguous', 'hand-to-mouth', 'light', 'meager', 'meagre', 'niggardly', 'scant', 'scanty', 'scarce', 'skimp', 'skimpy', 'slender', 'slim', 'spare', 'sparing', 'sparse', 'stingy']",
+        "annotation_remove":0
+    },
+    "160":{
+        "category":"poor",
+        "source":"merriam_webster",
+        "sense":3,
+        "sense_definition":"falling short of a standard",
+        "tokens":"['bad', 'bastard', 'bush', 'bush-league', 'crummy', 'crumby', 'deficient', 'dissatisfactory', 'ill', 'inferior', 'lame', 'lousy', 'off', 'paltry', 'punk', 'sour', 'suboptimal', 'subpar', 'substandard', 'unacceptable', 'unsatisfactory', 'wack', 'wanting', 'wretched', 'wrong']",
+        "annotation_remove":0
+    },
+    "161":{
+        "category":"poor",
+        "source":"merriam_webster",
+        "sense":4,
+        "sense_definition":"of low quality",
+        "tokens":"['bad', 'bargain-basement', 'bum', 'cheap', 'cheapjack', 'cheesy', 'coarse', 'common', 'crappy', 'cut-rate', 'el cheapo', 'execrable', 'gimcrack', 'inferior', 'junky', 'lousy', 'low-grade', 'low-rent', 'mediocre', 'miserable', 'rotten', 'rubbishy', 'schlock', 'schlocky', 'shlock', 'shlocky', 'second-rate', 'shoddy', 'sleazy', 'terrible', 'trashy', 'trumpery', 'wretched']",
+        "annotation_remove":0
+    },
+    "162":{
+        "category":"poor",
+        "source":"merriam_webster",
+        "sense":5,
+        "sense_definition":"deserving of one's pity",
+        "tokens":"['heartbreaking', 'heartrending', 'miserable', 'pathetic', 'piteous', 'pitiable', 'pitiful', 'rueful', 'sorry', 'wretched']",
+        "annotation_remove":0
+    },
+    "163":{
+        "category":"poor",
+        "source":"synonym_com",
+        "sense":6,
+        "sense_definition":null,
+        "tokens":"['hapless', 'misfortunate', 'pathetic', 'piteous', 'pitiable', 'pitiful', 'unfortunate', 'wretched']",
+        "annotation_remove":0
+    },
+    "164":{
+        "category":"poor",
+        "source":"thesaurus_com",
+        "sense":7,
+        "sense_definition":null,
+        "tokens":"['bad off', 'bankrupt', 'beggared', 'beggarly', 'behind the eight ball', 'broke', 'destitute', 'dirt poor', 'down-and-out', 'empty-handed', 'flat', 'flat broke', 'fortuneless', 'hard up', 'impecunious', 'impoverished', 'in need', 'in want', 'indigent', 'insolvent', 'low', 'meager', 'moneyless', 'necessitous', 'needy', 'pauperized', 'penniless', 'penurious', 'pinched', 'poverty-stricken', 'reduced', 'scanty', 'stone broke', 'strapped', 'suffering', 'truly needy', 'underprivileged', 'unprosperous']",
+        "annotation_remove":0
+    },
+    "165":{
+        "category":"poor",
+        "source":"wordnet",
+        "sense":8,
+        "sense_definition":null,
+        "tokens":"['poor people']",
+        "annotation_remove":0
+    },
+    "166":{
+        "category":"power",
+        "source":"merriam_webster",
+        "sense":0,
+        "sense_definition":"the right or means to command or control others",
+        "tokens":"['arm', 'authority', 'clutch', 'command', 'control', 'death grip', 'dominion', 'grip', 'hold', 'mastery', 'reign', 'rein(s)', 'sway']",
+        "annotation_remove":0
+    },
+    "167":{
+        "category":"power",
+        "source":"merriam_webster",
+        "sense":1,
+        "sense_definition":"the ability to exert effort for the accomplishment of a task",
+        "tokens":"['energy', 'firepower', 'force', 'horsepower', 'might', 'muscle', 'potence', 'potency', 'puissance', 'sinew', 'strength', 'vigor']",
+        "annotation_remove":0
+    },
+    "168":{
+        "category":"power",
+        "source":"merriam_webster",
+        "sense":2,
+        "sense_definition":"a natural ability of the mind or body",
+        "tokens":"['faculty']",
+        "annotation_remove":0
+    },
+    "169":{
+        "category":"power",
+        "source":"merriam_webster",
+        "sense":3,
+        "sense_definition":"something with a usable capacity for doing work",
+        "tokens":"['energy', 'fuel']",
+        "annotation_remove":0
+    },
+    "170":{
+        "category":"power",
+        "source":"synonym_com",
+        "sense":4,
+        "sense_definition":null,
+        "tokens":"['chokehold', 'control', 'discretion', 'disposal', 'effectiveness', 'effectivity', 'effectuality', 'effectualness', 'free will', 'influence', 'interest', 'interestingness', 'irresistibility', 'irresistibleness', 'jurisdiction', 'legal power', 'persuasiveness', 'potency', 'powerful', 'powerfulness', 'powerless', 'preponderance', 'puissance', 'quality', 'repellant', 'repellent', 'stranglehold', 'strength', 'sway', 'throttlehold', 'valence', 'valency']",
+        "annotation_remove":0
+    },
+    "171":{
+        "category":"power",
+        "source":"thesaurus_com",
+        "sense":5,
+        "sense_definition":null,
+        "tokens":"['capability', 'capacity', 'competency', 'dynamism', 'effectiveness', 'efficacy', 'endowment', 'faculty', 'function', 'gift', 'influence', 'potential', 'potentiality', 'qualification', 'skill', 'talent']",
+        "annotation_remove":0
+    },
+    "172":{
+        "category":"power",
+        "source":"wordnet",
+        "sense":6,
+        "sense_definition":null,
+        "tokens":"['ability', 'baron', 'big businessman', 'business leader', 'electrical energy', 'electricity', 'exponent', 'force', 'great power', 'index', 'king', 'magnate', 'major power', 'might', 'mightiness', 'mogul', 'office', 'powerfulness', 'superpower', 'top executive', 'tycoon', 'world power']",
+        "annotation_remove":0
+    },
+    "173":{
+        "category":"sick",
+        "source":"merriam_webster",
+        "sense":0,
+        "sense_definition":"temporarily suffering from a disorder of the body",
+        "tokens":"['ailing', 'bad', 'down', 'ill', 'indisposed', 'peaked', 'peaky', 'poorly', 'punk', 'run-down', 'sickened', 'unhealthy', 'unsound', 'unwell']",
+        "annotation_remove":0
+    },
+    "174":{
+        "category":"sick",
+        "source":"merriam_webster",
+        "sense":1,
+        "sense_definition":"filled with disgust",
+        "tokens":"['disgusted', 'nauseated', 'repelled', 'repulsed', 'revolted', 'shocked', 'sickened']",
+        "annotation_remove":0
+    },
+    "175":{
+        "category":"sick",
+        "source":"merriam_webster",
+        "sense":2,
+        "sense_definition":"affected with nausea",
+        "tokens":"['ill', 'nauseated', 'nauseous', 'qualmish', 'queasy', 'queazy', 'queer', 'queerish', 'sickish', 'squeamish']",
+        "annotation_remove":0
+    },
+    "176":{
+        "category":"sick",
+        "source":"merriam_webster",
+        "sense":3,
+        "sense_definition":"having one's patience, interest, or pleasure exhausted",
+        "tokens":"['bored', 'fed up', 'jaded', 'sick and tired', 'tired', 'wearied', 'weary']",
+        "annotation_remove":0
+    },
+    "177":{
+        "category":"sick",
+        "source":"merriam_webster",
+        "sense":4,
+        "sense_definition":"having or showing lowered moral character or standards",
+        "tokens":"['corrupt', 'debased', 'debauched', 'decadent', 'degenerate', 'degraded', 'demoralized', 'depraved', 'dissipated', 'dissolute', 'jackleg', 'libertine', 'loose', 'perverse', 'perverted', 'rakehell', 'rakehelly', 'rakish', 'reprobate', 'unclean', 'unwholesome', 'warped']",
+        "annotation_remove":0
+    },
+    "178":{
+        "category":"sick",
+        "source":"synonym_com",
+        "sense":5,
+        "sense_definition":null,
+        "tokens":"['afflicted', 'aguish', 'ailing', 'air sick', 'airsick', 'autistic', 'bedfast', 'bedrid', 'bedridden', 'bilious', 'bronchitic', 'carsick', 'consumptive', 'convalescent', 'delirious', 'diabetic', 'dizzy', 'dyspeptic', 'faint', 'feverish', 'feverous', 'funny', 'giddy', 'gouty', 'green', 'hallucinating', 'ill', 'indisposed', 'laid low', 'laid up', 'light', 'light-headed', 'lightheaded', 'liverish', 'livery', 'milk-sick', 'nauseated', 'nauseous', 'palsied', 'paralytic', 'paralyzed', 'peaked', 'poorly', 'queasy', 'rachitic', 'recovering', 'rickety', 'scrofulous', 'seasick', 'seedy', 'sick-abed', 'sickish', 'sickly', 'sneezy', 'spastic', 'stricken', 'swooning', 'tubercular', 'tuberculous', 'under the weather', 'unfit', 'unhealed', 'unhealthy', 'unwell', 'upset', 'vertiginous', 'woozy']",
+        "annotation_remove":0
+    },
+    "179":{
+        "category":"sick",
+        "source":"thesaurus_com",
+        "sense":6,
+        "sense_definition":null,
+        "tokens":"['ailing', 'bedridden', 'broken down', 'confined', 'debilitated', 'declining', 'defective', 'delicate', 'diseased', 'disordered', 'down', 'feeble', 'feverish', 'frail', 'funny', 'green', 'hospitalized', 'ill', 'impaired', 'imperfect', 'in a bad way', 'in poor health', 'incurable', 'indisposed', 'infected', 'infirm', 'invalid', 'laid-up', 'lousy', 'mean', 'nauseated', 'not so hot', 'peaked', 'poorly', 'qualmish', 'queasy', 'rickety', 'rocky', 'rotten', 'run down', 'sick as a dog', 'suffering', 'tottering', 'under medication', 'under the weather', 'unhealthy', 'unwell', 'weak', 'wobbly']",
+        "annotation_remove":0
+    },
+    "180":{
+        "category":"stressed",
+        "source":"merriam_webster",
+        "sense":0,
+        "sense_definition":"suffering from high levels of physical and especially psychological stress",
+        "tokens":"['shell-shocked', 'stressed-out']",
+        "annotation_remove":0
+    },
+    "181":{
+        "category":"stressed",
+        "source":"merriam_webster",
+        "sense":1,
+        "sense_definition":"to experience concern or anxiety",
+        "tokens":"['bothered', 'feared', 'fretted', 'fussed', 'stewed', 'sweat', 'sweated', 'troubled', 'worried']",
+        "annotation_remove":0
+    },
+    "182":{
+        "category":"stressed",
+        "source":"merriam_webster",
+        "sense":2,
+        "sense_definition":"to make more apparent",
+        "tokens":"['accentuated', 'brought out', 'emphasized', 'italicized', 'underlined', 'underscored']",
+        "annotation_remove":0
+    },
+    "183":{
+        "category":"stressed",
+        "source":"merriam_webster",
+        "sense":3,
+        "sense_definition":"to indicate the importance of by centering attention on",
+        "tokens":"['accented', 'accentuated', 'emphasized', 'featured', 'foregrounded', 'highlighted', 'illuminated', 'played up', 'pointed (up)', 'pressed', 'punctuated']",
+        "annotation_remove":0
+    },
+    "184":{
+        "category":"stressed",
+        "source":"synonym_com",
+        "sense":4,
+        "sense_definition":null,
+        "tokens":"['troubled']",
+        "annotation_remove":0
+    },
+    "185":{
+        "category":"stressed",
+        "source":"thesaurus_com",
+        "sense":5,
+        "sense_definition":null,
+        "tokens":"['fraught', 'haggard', 'harassed', 'harrowed', 'peaked', 'pinched', 'sapped', 'starved', 'strained', 'taut', 'thin', 'tired', 'worn']",
+        "annotation_remove":0
+    },
+    "186":{
+        "category":"suicidal",
+        "source":"synonym_com",
+        "sense":0,
+        "sense_definition":null,
+        "tokens":"['dangerous', 'unsafe']",
+        "annotation_remove":1
+    },
+    "187":{
+        "category":"suicidal",
+        "source":"thesaurus_com",
+        "sense":1,
+        "sense_definition":null,
+        "tokens":"['dangerous', 'deadly', 'depressed', 'destructive', 'fatal', 'lethal']",
+        "annotation_remove":1
+    },
+    "188":{
+        "category":"trapped",
+        "source":"merriam_webster",
+        "sense":0,
+        "sense_definition":"as in ensnared",
+        "tokens":"['caught up', 'enmeshed', 'immeshed', 'ensnared', 'ensnarled', 'entangled', 'entoiled', 'entrapped', 'meshed', 'netted', 'snared', 'tangled']",
+        "annotation_remove":1
+    },
+    "189":{
+        "category":"trapped",
+        "source":"merriam_webster",
+        "sense":1,
+        "sense_definition":"to catch or hold as if in a net",
+        "tokens":"['bagged', 'captured', 'caught', 'collared', 'copped', 'corralled', 'glommed', 'got', 'grabbed', 'grappled', 'hooked', 'landed', 'nabbed', 'nailed', 'netted', 'nobbled', 'rapped', 'seized', 'snagged', 'snapped (up)', 'snared', 'snatched']",
+        "annotation_remove":0
+    },
+    "190":{
+        "category":"trapped",
+        "source":"synonym_com",
+        "sense":2,
+        "sense_definition":null,
+        "tokens":"['at bay', 'cornered', 'unfree']",
+        "annotation_remove":1
+    },
+    "191":{
+        "category":"trapped",
+        "source":"thesaurus_com",
+        "sense":3,
+        "sense_definition":null,
+        "tokens":"['ambushed', 'at bay', 'captured', 'cornered']",
+        "annotation_remove":0
+    },
+    "192":{
+        "category":"useless",
+        "source":"merriam_webster",
+        "sense":0,
+        "sense_definition":"not capable of being put to use or account",
+        "tokens":"['impracticable', 'impractical', 'inoperable', 'nonpractical', 'unserviceable', 'unusable', 'unworkable']",
+        "annotation_remove":0
+    },
+    "193":{
+        "category":"useless",
+        "source":"merriam_webster",
+        "sense":1,
+        "sense_definition":"producing no results",
+        "tokens":"['abortive', 'barren', 'bootless', 'empty', 'fruitless', 'futile', 'ineffective', 'ineffectual', 'inefficacious', 'otiose', 'profitless', 'unavailing', 'unproductive', 'unprofitable', 'unsuccessful', 'vain']",
+        "annotation_remove":0
+    },
+    "194":{
+        "category":"useless",
+        "source":"synonym_com",
+        "sense":2,
+        "sense_definition":null,
+        "tokens":"['futile', 'ineffective', 'ineffectual', 'inutile', 'otiose', 'unavailing', 'uneffective', 'unprofitable', 'unserviceable', 'unusable', 'unuseable', 'utility']",
+        "annotation_remove":0
+    },
+    "195":{
+        "category":"useless",
+        "source":"thesaurus_com",
+        "sense":3,
+        "sense_definition":null,
+        "tokens":"['abortive', 'bootless', 'counterproductive', 'disadvantageous', 'dysfunctional', 'expendable', 'feckless', 'fruitless', 'futile', 'good-for-nothing', 'hopeless', 'idle', 'impracticable', 'impractical', 'incompetent', 'ineffective', 'ineffectual', 'inept', 'inoperative', 'inutile', 'meaningless', 'no good', 'nonfunctional', 'of no use', 'pointless', 'profitless', 'purposeless', 'scrap', 'stupid', 'unavailable', 'unavailing', 'unfunctional', 'unproductive', 'unprofitable', 'unpurposed', 'unusuable', 'unworkable', 'vain', 'valueless', 'waste', 'weak', 'worthless']",
+        "annotation_remove":0
+    }
+}
