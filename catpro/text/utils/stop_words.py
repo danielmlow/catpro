@@ -3,7 +3,7 @@ import importlib
 from nltk.corpus import stopwords
 import nltk
 
-from utils.tokenizer import spacy_tokenizer
+from text.utils.tokenizer import spacy_tokenizer
 
 
 nltk_language = {
@@ -42,15 +42,15 @@ def remove_stopwords_doc(word_list,method='nltk', language = 'en', extend_stopwo
 	filtered_words = ' '.join(filtered_words)
 	return filtered_words
 
-def remove(docs, language = 'en', method = 'nltk', remove_punct = True, extend_stopwords=None):
+def remove(docs, language = 'en', method = 'nltk', remove_punct = True, extend_stopwords=None, exclude_stopwords=None):
 	# docs = ['Recovery limbo Anyone else "recovered", but still have an unhealthy relationship with food/body? I\'ve basically been eating maintenance for the past 6 years after a period of quite severe anorexia at 14-ish, but I still feel like I\'ve barely changed. Still feel proud if I skip a meal, feel bad about my body, etc.\n\n&amp;#x200B;\n\nAnyone else in a similar boat? Just feels like it should be better after such a long time I guess.',
 	#         'Food is the worst "drug" Hey guys I\'m fat. I\'m a fatty fat and I was just thinking it sucks that you cant quit food. When I eat its like all the dopamine and I cant stop. You can quit smoking or drinking or weed or heroin or meth but not food and that sucks because my relationship with food sucks and I hate it and it sucks. \n\nThanks for coming to my rant I just wanted that off my chest',
 	#         "I can't focus on anything but just can't bring myself to eat. So I guess I'm going to fail finals and be one of those freshman fuck ups who should've taken a gap year. I feel consumed by pain. The crippling, falling to your knees type."]
 	if remove_punct:
 		docs = [remove_puctuation(doc) for doc in docs]
 
-	docs = [doc.lower() for doc in docs]
-	docs = spacy_tokenizer(docs,method = 'word', language = 'en',lowercase=True)
+	# docs = [doc.lower() for doc in docs] #lowercase docs
+	docs = spacy_tokenizer(docs,method = 'words', language = 'en',lowercase=True) #tokenize docs into words
 
 	filtered_docs = [remove_stopwords_doc(word_list,method=method, language = language, extend_stopwords=extend_stopwords) for word_list in docs]
 	return filtered_docs
@@ -58,4 +58,5 @@ def remove(docs, language = 'en', method = 'nltk', remove_punct = True, extend_s
 '''
 docs =  ['i am a boy. How about you?', 'I went to the supermarket']
 print(remove(docs, language = 'en', method = 'nltk', remove_punct=True))
+
 '''

@@ -17,7 +17,7 @@ def spacy_lemmatizer(docs, language = 'en'):
 
 
 '''
-import utils.stop_words as stop_words
+import catpro.utils.stop_words as stop_words
 docs =['alone', "I've been worried but hopeful", "I've been feeling all alone but hopeful and I'll do therapy. Gotta take it step by step."] 
 docs = spacy_lemmatizer(docs)
 docs = [stop_words.remove(i) for i in docs]

@@ -1,17 +1,44 @@
 import pandas as pd
+import numpy as np
 import datetime
 import pytz
+from dateutil import parser
+
 
 def utc0_to_timezone(datetime_value, timezone = 'America/New_York',output_format = "%Y-%m-%d %H:%M:%S"):
-	if pd.isnull(datetime_value):
-		# print("Warning: null datetime. returning np.datetime64('NaT'), np.nan")
-		return np.datetime64('NaT'), np.nan
+	'''
+
+	Args:
+		datetime_value:
+		timezone:
+		output_format:
+
+	Returns:
+
+	# Example
+	timezone = 'America/New_York'
+	output_format = "%Y-%m-%d %H:%M:%S"
+	datetime_value =np.datetime64('2020-01-17T22:50:00.000000000')
 	datetime_value = pd.Timestamp(datetime_value)
 	datetime_value = datetime_value.replace(tzinfo=pytz.utc)
 	datetime_value = datetime_value.astimezone(pytz.timezone(timezone ))
 	datetime_str = datetime_value.strftime(output_format)
+	'''
+
+	if pd.isnull(datetime_value):
+		# print("Warning: null datetime. returning np.datetime64('NaT'), np.nan")
+		return np.datetime64('NaT'), np.nan
+	datetime_value = pd.Timestamp(datetime_value)
+	datetime_value = datetime_value.replace(tzinfo=pytz.utc) #put in UTC-0
+	datetime_value = datetime_value.astimezone(pytz.timezone(timezone ))
+	datetime_str = datetime_value.strftime(output_format)
 	return datetime_value, datetime_str
 
+
+def add_timezone(datetime_value, timezone='America/New_York'):
+	tz = pytz.timezone(timezone)
+	datetime_value = tz.localize(datetime_value)
+	return datetime_value
 
 
 # from dateutil import parser
@@ -30,6 +57,13 @@ def str_time_to_datetime(str_time='2020-12-22 14:02:01', method='manual', input_
 		dt = tz.localize(dt)
 
 	return dt
+
+def datetime_to_str_time(datetime_value,output_format = "%Y-%m-%d %H:%M:%S"):
+	return datetime_value.strftime(output_format)
+
+
+def nearest(list_of_datetimes, target_datetime):
+	return min(list_of_datetimes, key=lambda x: abs(x - target_datetime))
 
 	# MANUAL v2
 	# ========================================================================

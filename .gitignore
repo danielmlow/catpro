@@ -3,7 +3,7 @@
 catpro/data/*
 catpro/text/data/*
 catpro/.idea
-
+catpro/text/concept_tracker
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
