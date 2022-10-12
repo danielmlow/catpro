@@ -1,4 +1,9 @@
 
+'''
+pip install --upgrade jax jaxlib
+pip install -q flax
+'''
+
 import numpy as np
 from sentence_transformers import util
 import torch
@@ -23,66 +28,102 @@ import torch
 # output_bitrate = args.output_bitrate
 
 def cosine_similarity(embeddings1, embeddings2):
-    #Compute cosine-similarits
+	# from sklearn.metrics.pairwise import cosine_similarity
+	#
+	#Compute cosine-similarits
     cosine_scores = util.cos_sim(embeddings1, embeddings2)
     # print("{} \t\t {} \t\t Score: {:.4f}".format(sentences1[i], sentences2[i], cosine_scores[i][i]))
     return cosine_scores
 
 
 #Mean Pooling - Take attention mask into account for correct averaging
-def mean_pooling(model_output, attention_mask):
-    token_embeddings = model_output[0] #First element of model_output contains all token embeddings
+def mean_pooling(model_output, attention_mask,layer = 12):
+    '''
+
+	Args:
+		model_output:
+		attention_mask:
+		layer:
+			see all responses here https://stackoverflow.com/questions/63461262/bert-sentence-embeddings-from-transformers
+			see here as well:https://stackoverflow.com/questions/61323621/how-to-understand-hidden-states-of-the-returns-in-bertmodelhuggingface-transfo
+
+	Returns:
+
+	'''
+    token_embeddings = model_output.get('hidden_states')[layer]
     input_mask_expanded = attention_mask.unsqueeze(-1).expand(token_embeddings.size()).float()
     return torch.sum(token_embeddings * input_mask_expanded, 1) / torch.clamp(input_mask_expanded.sum(1), min=1e-9)
 
 
-def vectorize(docs, package = 'sentence_transformers', model_name = 'all-MiniLM-L6-v2', embedding_type = 'document'):
+def vectorize(docs, list_of_lists = False, package = 'flair', embedding_type = 'sentence', model_name = 'default'):
 	'''
-
 	Args:
-		docs:
-		package: sentence_transformers, flair
-		model_name:
-			'default'
-			word:
-			transformer_word:
-			document:
-			sentence:
+		docs: list (each element is a string for an entire document) or list of lists (each inner list represents a
+		documents and contains tokens (words, clauses, sentences)). See list_of_lists argument below.
 
-		embedding_type: [only used if package == 'flair'], word, transformer_word, document, sentence
+		list_of_lists : bool, default=False
+			if False, function expects a list of strings.
+				[ 'happy', 'table', ... ]
+
+			if True, function expects a list of list of strings
+				[   ['I', 'thought', ...],
+					['By', 'the', ...],
+					...
+				]
+				or
+				[   ['I went to the movies', 'I hated it', ...],
+					['By the time she arrived I had already left', 'cannot stand shouting', ...],
+					...
+				]
+
+
+		package : {'sentence_transformers', 'flair', 'transformers'}, default='flair'
+			Python packages
+			sentence_transformers (aka, sBERT)  https://github.com/UKPLab/sentence-transformers
+			flair                               https://github.com/flairNLP/flair
+			transformers (aka huggingface)      https://github.com/huggingface/transformers
+
+		embedding_type : {'word', 'transformer_word', 'sentence', 'document'}, default='sentence'
+			Only applicable if package == 'flair'
+			Embeddings can be created for words, sentences, and documents.
+			word : traditional word embeddings (glove, word2vec)
+
+		model_name : {'default' or see under each package type for URLs to list of model names},
+			default for
+			default for ='all-MiniLM-L6-v2'
 
 	Returns:
 		array of embeddings
 
 	'''
+
 	from flair.data import Sentence
 	if package=='sentence_transformers':
 		from sentence_transformers import SentenceTransformer
 		# https://www.sbert.net/docs/pretrained_models.html
-		# model = select_backend(model_name)
-		model = SentenceTransformer(model_name)
+
+		if model_name == 'default':
+			model_name = 'all-MiniLM-L6-v2' #fast and high performing
+
+		print(f'encoding {package} model: {model_name}')
+		model = SentenceTransformer(model_name) # model = select_backend(model_name)
 		embeddings = model.encode(docs)
 		# embeddings = embeddings[index].reshape(1, -1)
 		print('docs x embedding size:', embeddings.shape)
 		return embeddings
 	elif package == 'flair':
+		# todo file_download.py:624: FutureWarning: `cached_download` is the legacy way to download files from the HF hub, please consider upgrading to `hf_hub_download`
+		#   FutureWarning,
+
 		if embedding_type == 'word':
 			from flair.embeddings import WordEmbeddings
 			# model_names: https://github.com/flairNLP/flair/blob/master/resources/docs/embeddings/CLASSIC_WORD_EMBEDDINGS.md
 			if model_name == 'default':
 				model_name = 'glove'
-			embedder = WordEmbeddings(model_name)
-			# embedder = DocumentPoolEmbeddings([embedder])
+			embedder = WordEmbeddings(model_name) # embedder = DocumentPoolEmbeddings([embedder])
 
 			# Sentence() can take a list of words, a sentence or a document and it will turn it into a single string and tokenize into words.
-			flair_sentences = [embedder.embed(Sentence(doc))[0] for doc in docs]
-			embeddings = []
-			for doc in flair_sentences:
-				embeddings.append(np.array([token.embedding.cpu().detach().numpy() for token in doc.tokens], dtype=object))
-			embeddings = np.array(embeddings, dtype=object)
-			print('docs:', embeddings.shape)
-			print('tokens x embedding size:', [n.shape for n in embeddings])
-			return embeddings
+
 
 		elif embedding_type == 'transformer_word':
 			# Transformer word embeddings
@@ -90,6 +131,9 @@ def vectorize(docs, package = 'sentence_transformers', model_name = 'all-MiniLM-
 			# documentation: https://github.com/flairNLP/flair/blob/master/resources/docs/embeddings/TRANSFORMER_EMBEDDINGS.md
 			# models: https://huggingface.co/transformers/v2.3.0/pretrained_models.html
 			from flair.embeddings import TransformerWordEmbeddings
+			if model_name == 'default':
+				model_name = 'bert-base-uncased'
+
 			embedder = TransformerWordEmbeddings(model_name)# init embedding
 
 		# =========================================================================================================
@@ -106,8 +150,15 @@ def vectorize(docs, package = 'sentence_transformers', model_name = 'all-MiniLM-
 			# Embeddings from sBERT
 			# https://www.sbert.net/docs/pretrained_models.html
 			# https://docs.google.com/spreadsheets/d/14QplCdTCDwEmTqrn1LH4yrbKvdogK4oQvYO1K1aPR5M/edit#gid=0
+			# https://github.com/flairNLP/flair/blob/master/resources/docs/TUTORIAL_5_DOCUMENT_EMBEDDINGS.md#sentencetransformerdocumentembeddings
 			from flair.embeddings import SentenceTransformerDocumentEmbeddings
+
+			if model_name == 'default':
+				model_name = 'all-MiniLM-L6-v2'
+
 			embedder = SentenceTransformerDocumentEmbeddings(model_name)
+		# 	todo: file_download.py:624: FutureWarning: `cached_download` is the legacy way to download files from the HF hub, please consider upgrading to `hf_hub_download`
+		#   FutureWarning,
 
 		elif embedding_type == 'document':
 			# Transformer document embeddings
@@ -115,43 +166,81 @@ def vectorize(docs, package = 'sentence_transformers', model_name = 'all-MiniLM-
 			# tutorial: https://github.com/flairNLP/flair/blob/master/resources/docs/TUTORIAL_5_DOCUMENT_EMBEDDINGS.md#transformerdocumentembeddings
 			# models from Huggingface: https://huggingface.co/models
 			from flair.embeddings import TransformerDocumentEmbeddings
-			# model_name = 'sentence-transformers/all-MiniLM-L6-v2'
+
+			if model_name == 'default':
+				model_name = 'bert-base-uncased'
 			# todo: play around with layers and layer_mean
+
 			embedder = TransformerDocumentEmbeddings(model_name,layers='-1',layer_mean=False)# init embedding
+
 		if 'word' in embedding_type:
-			flair_sentences = [embedder.embed(Sentence(doc))[0] for doc in docs]
-			embeddings = []
-			for doc in flair_sentences:
-				embeddings.append(np.array([token.embedding.cpu().detach().numpy() for token in doc.tokens], dtype=object))
-			embeddings = np.array(embeddings, dtype=object)
+			# docs = ['happy', 'sad']
+			print(f'encoding {package} {embedding_type} model: {model_name}')
+			# doc.tokens will take the tokens you give or split into words by default and returns list of list either way
+			flair_docs = [embedder.embed(Sentence(doc))[0] for doc in docs]
+			embeddings = np.array([np.array([token.embedding.cpu().detach().numpy() for token in doc.tokens], dtype=object)
+			                       for doc in flair_docs], dtype=object)
 			print('docs:', embeddings.shape)
-			print('tokens x embedding size:', [n.shape for n in embeddings])
+			# print('tokens x embedding size:', [n.shape for n in embeddings])
 			return embeddings
 		else:
-			embeddings = np.array([embedder.embed(Sentence(doc))[0].embedding.cpu().detach().numpy() for doc in docs], dtype=object)
+			print(f'encoding {package} {embedding_type} model: {model_name}')
+
+			if list_of_lists:
+				'''
+				docs = [['i am happy', 'not today'], ['i went to the movies', 'i like popcorn', 'how about you']]
+				'''
+				# from datetime import datetime
+				# start=datetime.now()
+				embeddings = []
+				for doc in docs:
+					flair_tokens = [embedder.embed(Sentence(token))[0] for token in doc]
+					docs_embeddings = np.array([flair_token.embedding.cpu().detach().numpy() for flair_token in flair_tokens], dtype=object)
+					embeddings.append(docs_embeddings)
+				embeddings = np.array(embeddings, dtype=object)
+				# print('tokens x embedding size:', [n.shape for n in embeddings])
+				# print(datetime.now()-start)
+
+			else:
+				# docs = ['i am a boy', 'you are a boy']
+				embeddings = np.array([[embedder.embed(Sentence(doc))[0].embedding.cpu().detach().numpy()] for doc in docs], dtype=object)
+
 			print('docs x embedding size:', embeddings.shape)
 			return embeddings
+
 	elif package == 'transformers': #aka huggingface
-		print('WARNING: not recommended: is slower than flair, and returns different output than flair and sentence_transformers')
+		print('WARNING: not recommended: is slower than flair, and returns different output than flair and sentence_transformers. '
+		      'Also each model might need a specific way to extract features, something that flair resolves for you.')
+		# todo play around with pooling https://stackoverflow.com/questions/61323621/how-to-understand-hidden-states-of-the-returns-in-bertmodelhuggingface-transfo
+		import torch.nn.functional as F
+		from transformers import AutoTokenizer, AutoModel
 		if embedding_type=='sentence':
-			from transformers import AutoTokenizer, AutoModel
-			import torch.nn.functional as F
-
 			# Load model from HuggingFace Hub
-			tokenizer = AutoTokenizer.from_pretrained('sentence-transformers/all-mpnet-base-v2')
-			model = AutoModel.from_pretrained('sentence-transformers/all-mpnet-base-v2')
+			if model_name == 'default':
+				model_name = 'sentence-transformers/all-mpnet-base-v2'
 
-			# Tokenize sentences
-			encoded_input = tokenizer(docs, padding=True, truncation=True, return_tensors='pt')
+		elif embedding_type=='document':
+			if model_name == 'default':
+				# todo:
+				pass
 
-			# Compute token embeddings
-			with torch.no_grad():
-				model_output = model(**encoded_input)
-			# Perform pooling
-			embeddings = mean_pooling(model_output, encoded_input['attention_mask'])
-			# Normalize embeddings
-			embeddings = F.normalize(embeddings, p=2, dim=1)
-			return embeddings
+		from transformers import AutoModelForMaskedLM
+		tokenizer = AutoTokenizer.from_pretrained(model_name)
+
+		if model_name in ['mnaylor/psychbert-cased']:
+			print('WARNING: jax not available on M1 chip: https://github.com/google/jax/issues/5501')
+			model = AutoModelForMaskedLM.from_pretrained(model_name, from_flax=True) # it uses flax
+		else:
+			model = AutoModel.from_pretrained(model_name)
+		encoded_input = tokenizer(docs, padding=True, truncation=True, return_tensors='pt')
+		# Compute token embeddings
+		with torch.no_grad():
+			model_output = model(**encoded_input,output_hidden_states=True)
+		# Perform pooling
+		embeddings = mean_pooling(model_output, encoded_input['attention_mask'])
+		# Normalize embeddings
+		embeddings = F.normalize(embeddings, p=2, dim=1)
+		return embeddings
 
 
 '''
@@ -162,6 +251,7 @@ embeddings3 = vectorize(docs, package = 'flair', model_name = 'distilbert-base-u
 embeddings4 = vectorize(docs, package = 'flair', model_name = 'all-MiniLM-L6-v2', embedding_type = 'sentence')
 embeddings5 = vectorize(docs, package = 'flair', model_name = 'distilroberta-base', embedding_type = 'document')
 embeddings6 = vectorize(docs, package = 'flair', model_name = 'sentence-transformers/all-MiniLM-L6-v2', embedding_type = 'document')
+embeddings6 = vectorize(docs, package = 'transformers', model_name = 'mnaylor/psychbert-cased', embedding_type = 'document')
 
 
 

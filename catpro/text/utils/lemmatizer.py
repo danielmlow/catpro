@@ -8,6 +8,12 @@ def spacy_lemmatizer(docs, language = 'en'):
 
 	if language=='en':
 		nlp = spacy.load('en_core_web_sm', disable = ['parser','ner'])
+
+	# 	todo: make available for other languages but add: disable = ['parser','ner']
+	# my_module = importlib.import_module("spacy.lang."+language) # from spacy.lang.en import English
+	# if language=='en':
+	# 	nlp = my_module.English()
+
 	docs_lemmatized = []
 	for doc in docs:
 		doc = nlp(doc)
@@ -30,5 +36,14 @@ docs = stop_words.remove(docs)
 docs = spacy_lemmatizer(docs)
 print(docs)
 >>> [['alone'], ['worried', 'hopeful'], ['feel', 'alone', 'hopeful', 'ill', 'therapy', 'got', 'to', 'take', 'step', 'step']]
+
+# Extract from DF
+messages = pd.read_csv(input_dir + 'instagram_messages.csv', index_col = 0)
+docs = messages['event'].values
+docs = [str(n) for n in messages['event'].values]
+docs_lemmatized = spacy_lemmatizer(docs)
+docs_lemmatized_joined = [' '.join(n) for n in docs_lemmatized]
+messages['event_lemmatized'] = docs_lemmatized_joined
+messages.to_csv(input_dir+'instagram_messages.csv')
 
 '''

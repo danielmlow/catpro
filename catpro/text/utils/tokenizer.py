@@ -17,22 +17,28 @@ import importlib
 
 
 
-def spacy_tokenizer(docs, language = 'en', model='en_core_web_sm', method = 'clause',lowercase=False, display_tree = False, remove_punct=True, clause_remove_conj = True):
+def spacy_tokenizer(docs, language = 'en', model='en_core_web_sm', token = 'clause',lowercase=False, display_tree = False, remove_punct=True, clause_remove_conj = True):
 	'''
+
 
 
 	Args:
 		docs:
 		model:
-		method:
+		token:
 		display_tree:
 
 	Returns:
 
+	Example:
+	docs = ['Recovery limbo Anyone else "recovered", but still have an unhealthy relationship with food/body? I\'ve basically been eating maintenance for the past 6 years after a period of quite severe anorexia at 14-ish, but I still feel like I\'ve barely changed. Still feel proud if I skip a meal, feel bad about my body, etc.\n\n&amp;#x200B;\n\nAnyone else in a similar boat? Just feels like it should be better after such a long time I guess.',
+        'Food is the worst "drug" Hey guys I\'m fat. I\'m a fatty fat and I was just thinking it sucks that you cant quit food. When I eat its like all the dopamine and I cant stop. You can quit smoking or drinking or weed or heroin or meth but not food and that sucks because my relationship with food sucks and I hate it and it sucks. \n\nThanks for coming to my rant I just wanted that off my chest',
+        "I can't focus on anything but just can't bring myself to eat. So I guess I'm going to fail finals and be one of those freshman fuck ups who should've taken a gap year. I feel consumed by pain. The crippling, falling to your knees type."]
+
 	'''
 	# TODO: split if you find ";"
 	# TODO: make into list comprehensions for faster processing
-	if method == 'word':
+	if token == 'word':
 		# doc = 'I am a boy'
 		my_module = importlib.import_module("spacy.lang."+language) # from spacy.lang.en import English
 		if language=='en':
@@ -47,7 +53,7 @@ def spacy_tokenizer(docs, language = 'en', model='en_core_web_sm', method = 'cla
 			tokens_for_all_docs.append(tokens)
 		return tokens_for_all_docs
 
-	elif method =='clause':
+	elif token =='clause':
 		nlp = spacy.load(model)
 		chunks_for_all_docs = []
 		for doc in nlp.pipe(docs):
@@ -100,14 +106,16 @@ def spacy_tokenizer(docs, language = 'en', model='en_core_web_sm', method = 'cla
 			chunks = sorted(chunks, key=lambda x: x[0])
 			chunks = [n[1] for n in chunks]
 			chunks_for_all_docs.append(chunks)
-
 		return chunks_for_all_docs
+	else:
+		raise ValueError("Possible tokens are 'word', 'clause', others are not implemented.")
+
 
 '''
 docs = ['I am very sad but hopeful and I will start therapy', 'I am very sad, but hopeful and I will start therapy', 
 "I've been feeling all alone but hopeful and I'll do therapy. Gotta take it step by step."]
 docs_tokenized = spacy_tokenizer(docs, language = 'en', model='en_core_web_sm', 
-					method = 'clause',lowercase=False, display_tree = True, 
+					token = 'clause',lowercase=False, display_tree = True, 
 					remove_punct=True, clause_remove_conj = True)
 print(docs_tokenized)
 '''
