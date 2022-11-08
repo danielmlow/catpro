@@ -23,7 +23,28 @@ def spacy_lemmatizer(docs, language = 'en'):
 
 
 '''
-import catpro.utils.stop_words as stop_words
+
+
+
+import text.utils.stop_words as stop_words
+
+docs = ["I've been feeling all alone and that no one cares about me. I go to therapy, but I'm pretty hopeless."]
+docs = spacy_lemmatizer(docs)
+docs = [stop_words.remove(i) for i in docs]
+docs = [n for n in docs[0] if n!='']
+print(', '.join(docs))
+
+
+spacy_lemmatizer(['lonesome'])
+
+
+
+docs = ["I've been feeling all alone and that no one cares about me. I go to therapy, but I'm pretty hopeless."]
+docs = spacy_tokenizer(docs)
+print(docs)
+
+docs = ['I've been feeling all alone and I feel like a burden to my family. I'll do therapy, but I'm pretty hopeless.']
+
 docs =['alone', "I've been worried but hopeful", "I've been feeling all alone but hopeful and I'll do therapy. Gotta take it step by step."] 
 docs = spacy_lemmatizer(docs)
 docs = [stop_words.remove(i) for i in docs]

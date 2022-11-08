@@ -112,6 +112,13 @@ def spacy_tokenizer(docs, language = 'en', model='en_core_web_sm', token = 'clau
 
 
 '''
+docs = ["I've been feeling all alone and I feel like a burden to my family. I'll do therapy, but I'm pretty hopeless."]
+docs_tokenized = spacy_tokenizer(docs, language = 'en', model='en_core_web_sm', 
+					token = 'clause',lowercase=False, display_tree = True, 
+					remove_punct=True, clause_remove_conj = True)
+print(docs_tokenized)
+
+
 docs = ['I am very sad but hopeful and I will start therapy', 'I am very sad, but hopeful and I will start therapy', 
 "I've been feeling all alone but hopeful and I'll do therapy. Gotta take it step by step."]
 docs_tokenized = spacy_tokenizer(docs, language = 'en', model='en_core_web_sm', 

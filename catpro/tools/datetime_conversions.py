@@ -35,6 +35,18 @@ def utc0_to_timezone(datetime_value, timezone = 'America/New_York',output_format
 	return datetime_value, datetime_str
 
 
+
+def local_str_to_utc(datetime_str, local_timezone = 'America/New_York',input_format = "%Y-%m-%d %H:%M:%S"):
+	local = pytz.timezone(local_timezone)
+	naive = datetime.strptime(datetime_str, input_format)
+	local_dt = local.localize(naive, is_dst=None)
+	utc_dt = local_dt.astimezone(pytz.utc)
+	return utc_dt
+
+def local_dt_to_utc(dt):
+	return datetime.datetime.utcfromtimestamp(dt)
+
+
 def add_timezone(datetime_value, timezone='America/New_York'):
 	tz = pytz.timezone(timezone)
 	datetime_value = tz.localize(datetime_value)
