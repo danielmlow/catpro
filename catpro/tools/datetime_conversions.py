@@ -5,6 +5,20 @@ import pytz
 from dateutil import parser
 
 
+def numpy_to_datetime(array):
+	'''
+
+	Args:
+		array:
+
+	Returns:
+		series, you can do series.hour or series.year
+
+	'''
+	series = pd.to_datetime(array)
+	return series
+
+
 def utc0_to_timezone(datetime_value, timezone = 'America/New_York',output_format = "%Y-%m-%d %H:%M:%S"):
 	'''
 
@@ -55,7 +69,7 @@ def add_timezone(datetime_value, timezone='America/New_York'):
 
 # from dateutil import parser
 from datetime import datetime
-def str_time_to_datetime(str_time='2020-12-22 14:02:01', method='manual', input_format = '%Y-%m-%d %H:%M:%S', add_timezone = 'America/New_York'):
+def str_time_to_datetime(str_time='2020-12-22 14:02:01', method='manual', input_format = '%Y-%m-%d %H:%M:%S', add_timezone = False):
 	# timezones: https://gist.github.com/heyalexej/8bf688fd67d7199be4a1682b3eec7568
 	if method == 'automated':
 		# automated but slower and not sure about performance
@@ -65,6 +79,7 @@ def str_time_to_datetime(str_time='2020-12-22 14:02:01', method='manual', input_
 		# https://strftime.org/
 		dt = datetime.strptime(str_time, input_format)
 	if add_timezone:
+		# 'America/New_York'
 		tz = pytz.timezone(add_timezone)
 		dt = tz.localize(dt)
 

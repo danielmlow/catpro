@@ -1,28 +1,23 @@
 
-# Author: Satvik Dixit
+# Author: Satvik Dixit, Daniel M. Low
 
 import numpy as np
 import scipy.signal
-# import matplotlib.pyplot as plt
 import scipy.io.wavfile
-# import io
-# import IPython
-# from IPython.display import Image
 import math
-# import soundfile as sf
-# import pandas as pd
+import soundfile as sf
 import numpy.matlib
 
 # function for computing cepstral peak prominence
 
 
-def cpp(x, fs, normOpt, dBScaleOpt):
+def cpp(x,fs, normOpt='line', dBScaleOpt=True, statistic='median'):
 	"""
-	Computes cepstral peak prominence for a given signal
+	Computes cepstral peak prominence for a given x
 	Parameters
 	-----------
 	x: ndarray
-		The audio signal
+		The audio x
 	fs: integer
 		The sampling frequency
 	normOpt: string
@@ -34,6 +29,8 @@ def cpp(x, fs, normOpt, dBScaleOpt):
 	cpp: ndarray
 		The CPP with time values
 	"""
+
+
 	# Settings
 	frame_length = int(np.round_(0.04*fs))
 	frame_shift = int(np.round_(0.01*fs))
@@ -99,6 +96,61 @@ def cpp(x, fs, normOpt, dBScaleOpt):
 
 	cpp = ceps_max-ceps_norm
 
+	if statistic == 'median':
+		cpp = np.median(cpp)
+
 	return cpp, time_samples
 
 
+def cpp_from_paths(paths, statistic = 'median'):
+	'''
+
+	Args:
+		paths:
+			list of path to files
+		statistic: bool or str
+			False, 'median'
+
+	Returns:
+
+	'''
+
+	cpp_statistics = []
+	for path in paths:
+		x, fs = sf.read(path)
+		cpp_across_time_windows, time_samples = cpp(x, fs, 'line',dBScaleOpt=True, statistic=statistic)
+		# cpp_all_files.append(cpp_across_time_windows)
+		cpp_statistics.append(cpp_across_time_windows)
+	return cpp_statistics
+
+
+'''
+import soundfile as sf
+import os
+import matplotlib.pyplot as plt
+import glob
+paths =  glob.glob('./audio/data/audio_samples/*')
+
+
+cpp_all_files = []
+
+cpp_statistics = []
+
+
+cpp_across_time_windows = cpp_from_paths(paths, statistic = "median")
+
+
+
+plt.plot(cpp_across_time_windows)
+labels = [n.split('/')[-1] for n in paths]
+plt.xticks(labels=labels, ticks = range(len(labels)), rotation=45)
+plt.tight_layout()
+	
+	
+	
+	
+
+
+
+
+'''

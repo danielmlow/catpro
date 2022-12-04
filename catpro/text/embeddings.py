@@ -29,11 +29,21 @@ import torch
 
 def cosine_similarity(embeddings1, embeddings2):
 	# from sklearn.metrics.pairwise import cosine_similarity
-	#
 	#Compute cosine-similarits
-    cosine_scores = util.cos_sim(embeddings1, embeddings2)
-    # print("{} \t\t {} \t\t Score: {:.4f}".format(sentences1[i], sentences2[i], cosine_scores[i][i]))
-    return cosine_scores
+	cosine_scores = util.cos_sim(np.array(embeddings1,dtype=float), np.array(embeddings2,dtype=float))
+	# print("{} \t\t {} \t\t Score: {:.4f}".format(sentences1[i], sentences2[i], cosine_scores[i][i]))
+	return cosine_scores
+
+
+def cosine_similarity_target(target_embeddings, embeddings):
+	from scipy.spatial import distance
+
+	distances = distance.cdist([target_embeddings], embeddings, "cosine")[0]
+	min_index = np.argmin(distances)
+	min_distance = distances[min_index]
+	max_similarity = 1 - min_distance
+	return distances, min_index, min_distance, max_similarity
+
 
 
 #Mean Pooling - Take attention mask into account for correct averaging
@@ -200,10 +210,13 @@ def vectorize(docs, list_of_lists = False, package = 'flair', embedding_type = '
 				embeddings = np.array(embeddings, dtype=object)
 				# print('tokens x embedding size:', [n.shape for n in embeddings])
 				# print(datetime.now()-start)
-
 			else:
-				# docs = ['i am a boy', 'you are a boy']
-				embeddings = np.array([[embedder.embed(Sentence(doc))[0].embedding.cpu().detach().numpy()] for doc in docs], dtype=object)
+				if type(docs)==str:
+					embeddings = np.array([embedder.embed(Sentence(docs))[0].embedding.cpu().detach().numpy()], dtype=object)
+				else:
+					# docs = ['i am a boy', 'you are a boy']
+					# Warning: I had previously wrapped each embedding in an additional list: resulting in shape (len_of_docs,1,384). removed so I can compute similarity with single words (1,384)
+					embeddings = np.array([embedder.embed(Sentence(doc))[0].embedding.cpu().detach().numpy() for doc in docs], dtype=object)
 
 			print('docs x embedding size:', embeddings.shape)
 			return embeddings
