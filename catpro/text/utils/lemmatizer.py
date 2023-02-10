@@ -1,6 +1,16 @@
 import spacy
 
 def spacy_lemmatizer(docs, language = 'en'):
+	'''
+
+	Args:
+		docs: list of strings
+		language: {'en', 'es'}
+
+	Returns:
+		list of 
+
+	'''
 	# docs = ['recovery limbo anyone else recovered still unhealthy relationship foodbody basically eating maintenance past 6 years period quite severe anorexia 14ish still feel like barely changed still feel proud skip meal feel bad body etc anyone else similar boat feels like better long time guess',
 	#         'food worst drug hey guys fat fatty fat thinking sucks quit food eat like dopamine stop quit smoking drinking weed heroin meth food sucks relationship food sucks hate sucks thanks coming rant wanted chest',
 	#         'focus anything bring eat guess going fail finals one freshman fuck ups taken gap year feel consumed pain crippling falling knees type']

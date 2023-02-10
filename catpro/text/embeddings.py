@@ -46,6 +46,16 @@ def cosine_similarity_target(target_embeddings, embeddings):
 
 
 
+def semantic_search(corpus_embeddings, query_embeddings):
+
+	# corpus_embeddings = corpus_embeddings.to('cuda')
+	corpus_embeddings = util.normalize_embeddings(corpus_embeddings)
+
+	# query_embeddings = query_embeddings.to('cuda')
+	query_embeddings = util.normalize_embeddings(query_embeddings)
+	hits = util.semantic_search(query_embeddings, corpus_embeddings, score_function=util.dot_score)
+	return hits
+
 #Mean Pooling - Take attention mask into account for correct averaging
 def mean_pooling(model_output, attention_mask,layer = 12):
     '''
@@ -266,6 +276,13 @@ embeddings5 = vectorize(docs, package = 'flair', model_name = 'distilroberta-bas
 embeddings6 = vectorize(docs, package = 'flair', model_name = 'sentence-transformers/all-MiniLM-L6-v2', embedding_type = 'document')
 embeddings6 = vectorize(docs, package = 'transformers', model_name = 'mnaylor/psychbert-cased', embedding_type = 'document')
 
+
+docs = ['combat engineer', 'pets', 'substance use', 'disability']
+embeddings = vectorize(docs, package = 'flair', model_name = 'bert-base-uncased', embedding_type = 'transformer_word')
+for e in embeddings:
+	print(e.shape)
+
+embeddings = vectorize(docs, package = 'flair', model_name = 'bert-base-uncased', embedding_type = 'sentence')
 
 
 

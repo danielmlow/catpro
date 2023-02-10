@@ -3,7 +3,7 @@ import numpy as np
 import datetime
 import pytz
 from dateutil import parser
-
+from datetime import timedelta
 
 def numpy_to_datetime(array):
 	'''
@@ -104,3 +104,48 @@ def nearest(list_of_datetimes, target_datetime):
 '''
 print(str_time_to_datetime(str_time='2020-12-22 14:02:01', method='manual'))
 '''
+
+
+def datetime_plus_n_hs(datetime_value, n = 24):
+	'''
+
+	Args:
+		datetime_value:
+		n: integer, in hours
+
+	Returns:
+
+	'''
+
+	return datetime_value + timedelta(hours=n)
+
+
+
+def list_months_between_interval(start='2014-10-10', end='2016-01-07'):
+	return pd.date_range(start, end, freq='MS').strftime("%Y-%m").tolist()
+
+
+am_pm_d = {'00': '12 am',
+           '01': '1 am',
+           '02': '2 am',
+           '03': '3 am',
+           '04': '4 am',
+           '05': '5 am',
+           '06': '6 am',
+           '07': '7 am',
+           '08': '8 am',
+           '09': '9 am',
+           '10': '10 am',
+           '11': '11 am',
+           '12': '12 pm',
+           '13': '1 pm',
+           '14': '2 pm',
+           '15': '3 pm',
+           '16': '4 pm',
+           '17': '5 pm',
+           '18': '6 pm',
+           '19': '7 pm',
+           '20': '8 pm',
+           '21': '9 pm',
+           '22': '10 pm',
+           '23': '11 pm'}

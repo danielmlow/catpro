@@ -30,22 +30,35 @@ def return_stopwords(method='nltk', language='en'):
 		return stopwords.words(nltk_language.get(language))
 
 
-def remove_stopwords_doc(word_list,method='nltk', language = 'en', extend_stopwords=None):
-	if method == 'nltk':
+def remove_stopwords_doc(word_list,sws='nltk', language = 'en', extend_stopwords=None):\
+	'''
+	
+	Args:
+		word_list: 
+		sws: 'nltk' or list of stopwords
+		language: 
+		extend_stopwords: 
+
+	Returns:
+
+	'''
+	if sws == 'nltk':
 		sws = nltk_stop_words.get(language)
 		if sws == None:
 			nltk.download('stopwords')
 			from nltk.corpus import stopwords
 
 			sws = stopwords.words(nltk_language.get(language))
-		if extend_stopwords:
-			sws.extend(extend_stopwords)
+	if extend_stopwords:
+		sws.extend(extend_stopwords)
 
-		filtered_words = [word for word in word_list if word not in sws]
-		filtered_words = ' '.join(filtered_words)
+
+	filtered_words = [word for word in word_list if word not in sws]
+	filtered_words = ' '.join(filtered_words)
+
 	return filtered_words
 
-def remove(docs, language = 'en', method = 'nltk', remove_punct = True, extend_stopwords=None, exclude_stopwords=None):
+def remove(docs, language = 'en', sws = 'nltk', remove_punct = True, extend_stopwords=None, exclude_stopwords=None):
 	'''
 
 	Args:
@@ -67,10 +80,10 @@ def remove(docs, language = 'en', method = 'nltk', remove_punct = True, extend_s
 	if remove_punct:
 		docs = [remove_puctuation(doc) for doc in docs]
 
-	# docs = [doc.lower() for doc in docs] #lowercase docs
+	# docs = [doc.lower().split() for doc in docs] #simple version: lowercase and split docs
 	docs = spacy_tokenizer(docs,token = 'word', language = 'en',lowercase=True) #tokenize docs into words
 
-	filtered_docs = [remove_stopwords_doc(word_list,method=method, language = language, extend_stopwords=extend_stopwords) for word_list in docs]
+	filtered_docs = [remove_stopwords_doc(word_list,sws=sws, language = language, extend_stopwords=extend_stopwords) for word_list in docs]
 	return filtered_docs
 
 '''
