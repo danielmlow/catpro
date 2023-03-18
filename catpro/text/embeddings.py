@@ -5,8 +5,11 @@ pip install -q flax
 '''
 
 import numpy as np
+import pandas as pd
 from sentence_transformers import util
+from sklearn.metrics.pairwise import cosine_similarity
 import torch
+
 
 # from utils.backend._utils import select_backend
 
@@ -27,17 +30,36 @@ import torch
 # output_format = args.output_format
 # output_bitrate = args.output_bitrate
 
-def cosine_similarity(embeddings1, embeddings2):
-	# from sklearn.metrics.pairwise import cosine_similarity
-	#Compute cosine-similarits
-	cosine_scores = util.cos_sim(np.array(embeddings1,dtype=float), np.array(embeddings2,dtype=float))
-	# print("{} \t\t {} \t\t Score: {:.4f}".format(sentences1[i], sentences2[i], cosine_scores[i][i]))
-	return cosine_scores
+
+def most_similar(embeddings):
+	similarities = cosine_similarity(embeddings)
+	#fast
+	np.fill_diagonal(similarities, 0) #set diagonal to zero
+	similarities *= 1 - np.tri(*similarities.shape, k=-1) #set lower triangle to 0
+	cos_sim_df = pd.DataFrame(similarities, columns = docs_to_cluster, index = docs_to_cluster)
+	most_similar = cos_sim_df.stack()
+	# slow
+	most_similar_nlargest = most_similar.nlargest(10000)
+	most_similar_df = most_similar_nlargest.reset_index()
+	most_similar_df.columns = ['token_a', 'token_b', 'cos']
+	most_similar_df = most_similar_df.round(2)
+	return most_similar_df
+
+def print_most_similar(most_similar_df, threshold_from = 0.6, threshold_to=1):
+	print([list(n) for n in most_similar_df[(most_similar_df['cos']>=threshold_from) & (most_similar_df['cos']<=threshold_to)].values]) #make list so its prints everything
+	return
+
+
+# def cosine_similarity(embeddings1, embeddings2):
+# 	# from sklearn.metrics.pairwise import cosine_similarity
+# 	#Compute cosine-similarits
+# 	cosine_scores = util.cos_sim(np.array(embeddings1,dtype=float), np.array(embeddings2,dtype=float))
+# 	# print("{} \t\t {} \t\t Score: {:.4f}".format(sentences1[i], sentences2[i], cosine_scores[i][i]))
+# 	return cosine_scores
 
 
 def cosine_similarity_target(target_embeddings, embeddings):
 	from scipy.spatial import distance
-
 	distances = distance.cdist([target_embeddings], embeddings, "cosine")[0]
 	min_index = np.argmin(distances)
 	min_distance = distances[min_index]

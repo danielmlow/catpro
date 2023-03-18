@@ -17,7 +17,7 @@ import importlib
 
 
 
-def spacy_tokenizer(docs, language = 'en', model='en_core_web_sm', token = 'clause',lowercase=False, display_tree = False, remove_punct=True, clause_remove_conj = True):
+def spacy_tokenizer(docs, language = 'en', model='en_core_web_sm', token = 'clause',lowercase=False, display_tree = False, remove_punct=True, clause_remove_conj = True, avoid_split_tokenizer=True):
 	'''
 
 
@@ -43,18 +43,23 @@ def spacy_tokenizer(docs, language = 'en', model='en_core_web_sm', token = 'clau
 		my_module = importlib.import_module("spacy.lang."+language) # from spacy.lang.en import English
 		if language=='en':
 			nlp = my_module.English()
+			if avoid_split_tokenizer:
+				nlp.tokenizer.rules = {key: value for key, value in nlp.tokenizer.rules.items() if "'" not in key and "’" not in key and "‘" not in key}
 		tokens_for_all_docs = []
 		for doc in docs:
 			doc = nlp(doc)
 			if lowercase:
 				tokens = [token.text.lower() for token in doc]
 			else:
-				tokens = [token.text.lower() for token in doc]
+				tokens = [token.text for token in doc]
 			tokens_for_all_docs.append(tokens)
 		return tokens_for_all_docs
 
 	elif token =='clause':
 		nlp = spacy.load(model)
+		if avoid_split_tokenizer:
+			nlp.tokenizer.rules = {key: value for key, value in nlp.tokenizer.rules.items() if "'" not in key and "’" not in key and "‘" not in key}
+
 		chunks_for_all_docs = []
 		for doc in nlp.pipe(docs):
 			# doc = en(text)
@@ -105,6 +110,10 @@ def spacy_tokenizer(docs, language = 'en', model='en_core_web_sm', token = 'clau
 
 			chunks = sorted(chunks, key=lambda x: x[0])
 			chunks = [n[1] for n in chunks]
+
+			if lowercase:
+				chunks = [n.lower() for n in chunks]
+
 			chunks_for_all_docs.append(chunks)
 		return chunks_for_all_docs
 	else:
