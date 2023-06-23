@@ -1,6 +1,6 @@
 # CATPro: Clinical Audio Text Processing
 
-![CATPro](https://github.com/danielmlow/catpro/blob/main/catpro/docs/catpro_logo.jpg?raw=true=250x)
+![CATPro](https://github.com/danielmlow/catpro/blob/main/catpro/docs/catpro_logo.jpg?raw=true=50x)
           
 
 Tools 
