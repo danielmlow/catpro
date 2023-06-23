@@ -97,7 +97,9 @@ def mean_pooling(model_output, attention_mask,layer = 12):
     return torch.sum(token_embeddings * input_mask_expanded, 1) / torch.clamp(input_mask_expanded.sum(1), min=1e-9)
 
 
-def vectorize(docs, list_of_lists = False, package = 'flair', embedding_type = 'sentence', model_name = 'default'):
+def vectorize(docs, list_of_lists = False, package = 'flair', embedding_type = 'sentence', model_name = 'default', verbose = True,
+              max_seq_length = False):
+	# leaderboard for text classification: https://huggingface.co/spaces/mteb/leaderboard
 	'''
 	Args:
 		docs: list (each element is a string for an entire document) or list of lists (each inner list represents a
@@ -133,6 +135,10 @@ def vectorize(docs, list_of_lists = False, package = 'flair', embedding_type = '
 		model_name : {'default' or see under each package type for URLs to list of model names},
 			default for
 			default for ='all-MiniLM-L6-v2'
+		verbose: print warnings
+		max_seq_length : {False, int}, default = False
+			sbert models take 128 words max. You can increase to max of base model, which is often 512.
+
 
 	Returns:
 		array of embeddings
@@ -147,11 +153,15 @@ def vectorize(docs, list_of_lists = False, package = 'flair', embedding_type = '
 		if model_name == 'default':
 			model_name = 'all-MiniLM-L6-v2' #fast and high performing
 
-		print(f'encoding {package} model: {model_name}')
+		if verbose:
+			print(f'encoding {package} model: {model_name}')
 		model = SentenceTransformer(model_name) # model = select_backend(model_name)
+		if max_seq_length:
+			model.max_seq_length = max_seq_length
 		embeddings = model.encode(docs)
 		# embeddings = embeddings[index].reshape(1, -1)
-		print('docs x embedding size:', embeddings.shape)
+		if verbose:
+			print('docs x embedding size:', embeddings.shape)
 		return embeddings
 	elif package == 'flair':
 		# todo file_download.py:624: FutureWarning: `cached_download` is the legacy way to download files from the HF hub, please consider upgrading to `hf_hub_download`
@@ -217,16 +227,19 @@ def vectorize(docs, list_of_lists = False, package = 'flair', embedding_type = '
 
 		if 'word' in embedding_type:
 			# docs = ['happy', 'sad']
-			print(f'encoding {package} {embedding_type} model: {model_name}')
+			if verbose:
+				print(f'encoding {package} {embedding_type} model: {model_name}')
 			# doc.tokens will take the tokens you give or split into words by default and returns list of list either way
 			flair_docs = [embedder.embed(Sentence(doc))[0] for doc in docs]
 			embeddings = np.array([np.array([token.embedding.cpu().detach().numpy() for token in doc.tokens], dtype=object)
 			                       for doc in flair_docs], dtype=object)
-			print('docs:', embeddings.shape)
+			if verbose:
+				print('docs:', embeddings.shape)
 			# print('tokens x embedding size:', [n.shape for n in embeddings])
 			return embeddings
 		else:
-			print(f'encoding {package} {embedding_type} model: {model_name}')
+			if verbose:
+				print(f'encoding {package} {embedding_type} model: {model_name}')
 
 			if list_of_lists:
 				'''
@@ -236,6 +249,9 @@ def vectorize(docs, list_of_lists = False, package = 'flair', embedding_type = '
 				# start=datetime.now()
 				embeddings = []
 				for doc in docs:
+					if str(doc) in ['', 'nan', '[]']:
+						embeddings.append( [np.zeros(384)])
+
 					flair_tokens = [embedder.embed(Sentence(token))[0] for token in doc]
 					docs_embeddings = np.array([flair_token.embedding.cpu().detach().numpy() for flair_token in flair_tokens], dtype=object)
 					embeddings.append(docs_embeddings)
@@ -248,9 +264,14 @@ def vectorize(docs, list_of_lists = False, package = 'flair', embedding_type = '
 				else:
 					# docs = ['i am a boy', 'you are a boy']
 					# Warning: I had previously wrapped each embedding in an additional list: resulting in shape (len_of_docs,1,384). removed so I can compute similarity with single words (1,384)
-					embeddings = np.array([embedder.embed(Sentence(doc))[0].embedding.cpu().detach().numpy() for doc in docs], dtype=object)
+					embeddings = np.array([embedder.embed(Sentence(doc))[0].embedding.cpu().detach().numpy() if str(doc) not in ['','nan'] else np.zeros(384) for doc in docs], dtype=object)
+					# except:
+					# 	print("this line didn't work:",'\nembeddings = np.array([embedder.embed(Sentence(doc))[0].embedding.cpu().detach().numpy() for doc in docs]',
+					# 	      '\nreturrning:','np.array([embedder.embed(Sentence(doc)) for doc in docs])')
+					# 	embeddings = np.array([embedder.embed(Sentence(doc)) for doc in docs])
 
-			print('docs x embedding size:', embeddings.shape)
+
+			print('docs x embedding size (should be two dimensional, if not check dimensions of each element):', embeddings.shape)
 			return embeddings
 
 	elif package == 'transformers': #aka huggingface

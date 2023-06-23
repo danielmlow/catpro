@@ -8,4 +8,6 @@ def remove_puctuation(doc):
 
 
 def remove_multiple_spaces(doc):
-	return re.sub(' +', ' ', doc)
+	try: return re.sub(' +', ' ', doc)
+	except:
+		print('could not parse:', doc)

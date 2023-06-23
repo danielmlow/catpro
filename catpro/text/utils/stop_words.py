@@ -30,7 +30,7 @@ def return_stopwords(method='nltk', language='en'):
 		return stopwords.words(nltk_language.get(language))
 
 
-def remove_stopwords_doc(word_list,sws='nltk', language = 'en', extend_stopwords=None):\
+def remove_stopwords_doc(word_list,sws='nltk', language = 'en', extend_stopwords=None):
 	'''
 	
 	Args:

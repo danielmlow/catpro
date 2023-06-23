@@ -38,7 +38,7 @@ def spacy_lemmatizer(docs, language = 'en'):
 
 import text.utils.stop_words as stop_words
 
-docs = ["I've been feeling all alone and that no one cares about me. I go to therapy, but I'm pretty hopeless."]
+docs = ["I've giving going fucking emptiness live life feeling existing been feeling all alone and that no one cares about me. I go to therapy, but I'm pretty hopeless."]
 docs = spacy_lemmatizer(docs)
 docs = [stop_words.remove(i) for i in docs]
 docs = [n for n in docs[0] if n!='']

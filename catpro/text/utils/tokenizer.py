@@ -135,3 +135,62 @@ docs_tokenized = spacy_tokenizer(docs, language = 'en', model='en_core_web_sm',
 					remove_punct=True, clause_remove_conj = True)
 print(docs_tokenized)
 '''
+
+def spacy_merge_tokenizer(docs, merge='entity', replace_entities = False):
+
+	'''
+	If you want to replace some entities and and just merge without replacing on other entities, first run with replace_entitites = ['entitity1, 'entitity2'] and then run replace_entitites = False
+	:param doc:
+	:param merge:
+	:param replace_entities: False, ['all'], or list containing the ones to be replaced: Person, Norp, Fac, Org, Gpe, Loc, Product, Event, Work_Of_Art, Law, Language, Date, Time, Percent, Money, Quantity, Ordinal, Cardinal
+	:return:
+	'''
+	nlp = spacy.load("en_core_web_sm", disable = ['parser', 'lemmatizer'])  # or "en_core_web_trf" which is for using or fine tuning transformer models. install here: https://spacy.io/models
+	if merge == 'entity':
+		nlp.add_pipe(nlp.create_pipe('merge_entities'))
+		# nlp.add_pipe("merge_entities")
+	elif merge == 'nouns':
+		nlp.add_pipe(nlp.create_pipe('merge_noun_chunks'))
+		# nlp.add_pipe("merge_noun_chunks")
+		# texts = [t.text for t in nlp("I have a blue car")]
+		# assert texts == ["I", "have", "a blue car"]
+
+	# Example
+	# doc = 'I met John, Mary, and Michael Jordan at Madison Square Garden on January 9, 2021. The ticket cost me 100 dollars ($100), and I bought it on the phone.'
+	# spacy_doc = nlp(doc)
+	spacy_docs = list(nlp.pipe(docs))
+
+	docs_processed = []
+	if replace_entities:
+		for doc, spacy_doc in zip(docs,spacy_docs):
+
+
+			# replace identying names () for PERSON. However, probably not best to replace famous names (Obama, Trump)
+			# best practice is to manually remove using visualizer because you could be removing "Barack Obama"
+			ents = [str(tok) for tok in spacy_doc.ents]
+			labels = [tok.label_ for tok in spacy_doc.ents]
+			entities = dict(zip(ents, labels))
+
+			# Todo fix: "I bought it on one phone" > "I bought it on CARDINAL phCARDINAL"
+
+			for entity, label in entities.items():
+
+				if label in replace_entities or 'all' in replace_entities:
+					doc = doc.replace(entity, label)
+			docs_processed.append(doc)
+		return docs_processed
+	else:
+		import re
+		for doc, spacy_doc in zip(docs,spacy_docs):
+			doc = " ".join([str(token).replace(' ', '_') for token in spacy_doc])
+
+			doc = remove_extra_white_space(doc)
+			# for punctuation in punctuations_both:
+			# 	doc = doc.replace(f' {punctuation} ',punctuation )
+			docs_processed.append(doc)
+
+		return docs_processed
+
+
+
+remove_if_startswith = ['I thought of ', 'I thought about ', 'I had ', 'I imagined ', 'I just ','I was ']

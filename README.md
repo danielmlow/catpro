@@ -1,7 +1,7 @@
-# CATPRO
+# CATPro: Clinical Audio Text Processing
 
+![CATPro](https://github.com/danielmlow/catpro/blob/docs/catpro_logo.jpg?raw=true)
 
-Clinical Audio Text Processing
 
 Tools 
 

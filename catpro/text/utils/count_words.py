@@ -69,3 +69,17 @@ def word_count(docs, return_zero = []):
 docs = ['R.I.P', 'by myself all alone']
 word_count(docs)
 '''
+
+from textacy import make_spacy_doc, text_stats
+def word_count_b(docs, return_zero = None):
+	# python -m spacy download en_core_web_sm
+	word_counts = []
+	for doc_i in docs:
+		doc_i = str(doc_i)
+		if doc_i in return_zero:
+			word_counts.append(0)
+		else:
+			doc = make_spacy_doc(doc_i, lang="en_core_web_sm")
+			ts = text_stats.TextStats(doc)
+			word_counts.append(ts.n_words)
+	return word_counts
